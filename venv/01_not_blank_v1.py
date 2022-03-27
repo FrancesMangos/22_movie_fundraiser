@@ -10,5 +10,6 @@ def not_blank(question):
         else:
             print("Sorry, this cannot be blank")
 
+
 #main program goes here
 name = not_blank("Name:")
