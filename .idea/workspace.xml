@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/02_ticket_loop_v1.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/02_ticket_loop_v1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/02_ticket_loop_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/02_ticket_loop_v2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +150,8 @@
     <MESSAGE value="done" />
     <MESSAGE value="v1 done" />
     <MESSAGE value="added comments to v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="added comments to v1" />
+    <MESSAGE value="v2 done" />
+    <MESSAGE value="actually version 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="actually version 2" />
   </component>
 </project>
