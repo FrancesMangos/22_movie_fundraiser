@@ -15,3 +15,4 @@ def not_blank(question, error_message):
 # main program goes here
 name = not_blank("Name:",
                  "Sorry, this cannot be blank, please enter your name.")
+
