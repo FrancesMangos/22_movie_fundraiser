@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/venv/00_base_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/00_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/00_base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/00_sandbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/00_sandbox.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +33,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.00_base">
+  <component name="RunManager" selected="Python.00_base_2">
     <configuration name="00_base" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="22_movie_fundraiser" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -54,7 +55,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="02_ticket_loop_v1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="00_base_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="22_movie_fundraiser" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -66,7 +67,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/02_ticket_loop_v1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/00_base_2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -75,7 +76,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="02_ticket_loop_v3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="00_sandbox" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="22_movie_fundraiser" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -87,7 +88,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/02_ticket_loop_v3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/00_sandbox.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -140,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.00_base_2" />
+        <item itemvalue="Python.00_sandbox" />
         <item itemvalue="Python.00_base" />
         <item itemvalue="Python.03_number_checker_v2" />
         <item itemvalue="Python.03_number_checker_v1" />
-        <item itemvalue="Python.02_ticket_loop_v3" />
-        <item itemvalue="Python.02_ticket_loop_v1" />
       </list>
     </recent_temporary>
   </component>
@@ -181,6 +182,7 @@
     <MESSAGE value="created base program" />
     <MESSAGE value="ooo" />
     <MESSAGE value="v2?" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2?" />
+    <MESSAGE value="wooooo" />
+    <option name="LAST_COMMIT_MESSAGE" value="wooooo" />
   </component>
 </project>
