@@ -72,7 +72,7 @@ if answer == "gloomy_cave":
     print("You are inside the gloomy cave")
     print("Left is a giant pool of water")
     print("Forward is a long passageway")
-    print("Backwards is")
+    print("Backwards is the entrance of the cave")
 elif answer == "rocky_wall":
     print("You are at the top of the rock wall")
 
