@@ -35,14 +35,15 @@ def int_check(question):
 
 # variables go here
 name = ""
-count = 0
+ticket_count = 0
+ticket_sales = 0
 MAX_TICKETS = 5
 
 # get details
-while name != "xxx" and count < MAX_TICKETS:
-    if count < 4:
+while name != "xxx" and ticket_count < MAX_TICKETS:
+    if ticket_count < MAX_TICKETS - 1:
         print("You have {} seats "
-              "left".format(MAX_TICKETS - count))
+              "left".format(MAX_TICKETS - ticket_count))
 
     # warns user that there is only one seat left
     else:
@@ -51,12 +52,14 @@ while name != "xxx" and count < MAX_TICKETS:
     # get name, cannot be blank
     name = not_blank("Name:")
 
+    # continue program if name is not exit code
     if name == "xxx":
         break
 
     # get age, between 12 and 130
     age = int_check("Age:")
 
+    # check if age is valid
     if age < 12:
         print("Sorry you are too young for this movie!")
         continue
@@ -64,15 +67,30 @@ while name != "xxx" and count < MAX_TICKETS:
         print("That is very old, it looks like a mistake!")
         continue
 
-    count += 1
+    # determine ticket price based on age
+    if age < 16:
+        ticket_price = 7.5
+
+    elif age < 65:
+        ticket_price = 10.5
+
+    else:
+        ticket_price = 6.5
+
+
+    ticket_count += 1
+    ticket_sales += ticket_price
 
     print()
 
+# calculate ticket price
+ticket_profit = ticket_sales - (5 * ticket_count)
+print("Ticket Profit: {:.2f}".format(ticket_profit))
 
-
-if count == MAX_TICKETS:
+# tell the user of any unsold tickets
+if ticket_count == MAX_TICKETS:
     print("You have sold all the available tickets!")
 else:
     print("You have sold {} tickets. \n"
           "There are {} places still available"
-          .format(count, MAX_TICKETS - count))
+          .format(ticket_count, MAX_TICKETS - ticket_count))
