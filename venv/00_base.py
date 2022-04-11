@@ -32,7 +32,6 @@ def int_check(question):
             print(error)
 
 
-
 # variables go here
 name = ""
 ticket_count = 0
