@@ -80,8 +80,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     ticket_count += 1
     ticket_sales += ticket_price
 
-    print()
-
+print()
 # calculate ticket price
 ticket_profit = ticket_sales - (5 * ticket_count)
 print("Ticket Profit: {:.2f}".format(ticket_profit))
