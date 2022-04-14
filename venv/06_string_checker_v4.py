@@ -1,5 +1,5 @@
 def string_check(choice, options):
-
+    is_valid = ""
     for var_list in options:
 
         if choice in var_list:
@@ -22,6 +22,17 @@ valid_snacks = [
     ["pita chips", "chips", "pc", "pita", "c"],
     ["water", "w", "d"]
 ]
+
+yes_no = [
+    ["yes", "y"],
+    ["no", "n"]
+]
+
+
+check_snack = "invalid choice"
+while check_snack == "invalid choice":
+    want_snack = input("Do you want Snacks?").lower()
+    check_snack = string_check(want_snack, yes_no)
 
 for item in range(0, 6):
 

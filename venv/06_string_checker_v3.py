@@ -1,5 +1,5 @@
 def string_check(choice, options):
-
+    is_valid = ""
     for var_list in options:
 
         if choice in var_list:
