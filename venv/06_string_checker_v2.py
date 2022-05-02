@@ -1,4 +1,3 @@
-
 # valid snacks holds list of all snacks
 # each item in valid snacks is a list with,
 # valid options for each snack - full name, letter code,
