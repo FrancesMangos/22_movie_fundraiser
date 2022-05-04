@@ -1,24 +1,36 @@
-def string_checker(question, to_check):
+# valid snacks holds list of all snacks
+# each item in valid snacks is a list with,
+# valid options for each snack - full name, letter code,
+# and any possible abbreviations
+valid_snacks = [
+    ["popcorn", "p", "corn", "a"],
+    ["M&M's", "m&m's", "mms", "m", "b"],
+    ["pita chips", "chips", "pc", "pita", "c"],
+    ["water", "w", "d"]
+]
 
-    valid = False
-    while not valid:
+# variables
+snack_ok = ""
+snack = ""
 
-        response = input(question).lower()
+# loop three times to make testing quicker
+for item in range(0, 3):
+    desired_snack = input("Snack: ").lower()
 
-        if response in to_check:
-            return response
+    for var_list in valid_snacks:
+
+        if desired_snack in var_list:
+
+            snack = var_list[0].title()
+            snack_ok = "yes"
+            break
 
         else:
-            for item in to_check:
+            snack_ok = "no"
 
-                if response == item[0]:
+    if snack_ok == "yes":
+        print("Snack Choice: ", snack)
 
-                    return item
+    else:
+        print("Invalid Choice")
 
-        print("Sorry that is not a valid response")
-
-for item in range(0,6):
-    want_snacks = string_checker("Do you want "
-                                 "snacks? ", ["yes", "no"])
-    print("Answer OK, you said:", want_snacks)
-    print()

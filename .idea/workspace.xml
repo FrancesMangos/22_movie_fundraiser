@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/venv/06_string_checker_v5.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +31,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.06_string_checker_v2">
+  <component name="RunManager" selected="Python.06_string_checker_v4">
     <configuration name="00_base_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="22_movie_fundraiser" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -140,10 +139,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.06_string_checker_v2" />
-        <item itemvalue="Python.06_string_checker_v5" />
         <item itemvalue="Python.06_string_checker_v4" />
         <item itemvalue="Python.06_string_checker_v3" />
+        <item itemvalue="Python.06_string_checker_v2" />
+        <item itemvalue="Python.06_string_checker_v5" />
         <item itemvalue="Python.00_base_2" />
       </list>
     </recent_temporary>
@@ -162,7 +161,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="got bored. might delete later" />
     <MESSAGE value="01 not blank done" />
     <MESSAGE value="02 not blank done" />
     <MESSAGE value="01 not blank done 2: electric boogaloo" />
@@ -187,6 +185,7 @@
     <MESSAGE value="commit arson, not really tho" />
     <MESSAGE value="same thing for now" />
     <MESSAGE value="woohoo" />
-    <option name="LAST_COMMIT_MESSAGE" value="woohoo" />
+    <MESSAGE value="aa insurance" />
+    <option name="LAST_COMMIT_MESSAGE" value="aa insurance" />
   </component>
 </project>
