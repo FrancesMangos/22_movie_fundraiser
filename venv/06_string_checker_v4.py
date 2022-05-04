@@ -16,6 +16,10 @@ def string_check(choice, options):
     else:
         return "invalid choice"
 
+# valid snacks holds list of all snacks
+# each item in valid snacks is a list with,
+# valid options for each snack - full name, letter code,
+# and any possible abbreviations
 valid_snacks = [
     ["popcorn", "p", "corn", "a"],
     ["M&M's", "m&m's", "mms", "m", "b"],
@@ -23,20 +27,42 @@ valid_snacks = [
     ["water", "w", "d"]
 ]
 
+# valid options for yes/no questions
 yes_no = [
     ["yes", "y"],
     ["no", "n"]
 ]
 
+snack_order = []
 
+# ask user if they want a snack
 check_snack = "invalid choice"
 while check_snack == "invalid choice":
     want_snack = input("Do you want Snacks?").lower()
     check_snack = string_check(want_snack, yes_no)
 
-for item in range(0, 6):
+if check_snack == "Yes":
+    desired_snack = ""
 
-    desired_snack = input("Snack: ").lower()
+    while desired_snack != "xxx":
 
-    snack_choice = string_check(desired_snack, valid_snacks)
-    print("Snack Choice: ", snack_choice)
+        desired_snack = input("Snack: ").lower()
+
+        if desired_snack == "xxx":
+            break
+
+        snack_choice = string_check(desired_snack, valid_snacks)
+        print("Snack Choice: ", snack_choice)
+
+        if snack_choice != "xxx" and snack_choice != "invalid choice":
+            snack_order.append(snack_choice)
+
+print()
+if len(snack_order) == 0:
+    print("Snacks Ordered: None")
+
+else:
+    print("Snacks Ordered: ")
+
+    for item in snack_order:
+        print(item)

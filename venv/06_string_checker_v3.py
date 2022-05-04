@@ -23,6 +23,17 @@ valid_snacks = [
     ["water", "w", "d"]
 ]
 
+yes_no = [
+    ["yes", "y"],
+    ["no", "n"]
+]
+
+
+check_snack = "invalid choice"
+while check_snack == "invalid choice":
+    want_snack = input("Do you want Snacks?").lower()
+    check_snack = string_check(want_snack, yes_no)
+
 for item in range(0, 6):
 
     desired_snack = input("Snack: ").lower()
