@@ -32,15 +32,52 @@ def int_check(question):
             print(error)
 
 
+def string_check(choice, options):
+    is_valid = ""
+    for var_list in options:
+
+        if choice in var_list:
+
+            chosen = var_list[0].title()
+            is_valid = "yes"
+            break
+
+        else:
+            is_valid == "no"
+
+    if is_valid == "yes":
+        return chosen
+    else:
+        return "invalid choice"
+
+
 # variables go here
 name = ""
 ticket_count = 0
 ticket_sales = 0
 MAX_TICKETS = 5
 
+# lists go here
+valid_snacks = [
+    ["popcorn", "p", "corn", "a"],
+    ["M&M's", "m&m's", "mms", "m", "b"],
+    ["pita chips", "chips", "pc", "pita", "c"],
+    ["orange juice", "orange j" "o juice", "oj", "d"],
+    ["water", "w", "e"]
+]
+
+# valid options for yes/no questions
+yes_no = [
+    ["yes", "y"],
+    ["no", "n"]
+]
+
+snack_order = []
+
 # get details
 while name != "xxx" and ticket_count < MAX_TICKETS:
     if ticket_count < MAX_TICKETS - 1:
+        print("=====================================")
         print("You have {} seats "
               "left".format(MAX_TICKETS - ticket_count))
 
@@ -79,6 +116,50 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 
     ticket_count += 1
     ticket_sales += ticket_price
+
+    print()
+
+    # ask user if they want a snack
+    check_snack = "invalid choice"
+    while check_snack == "invalid choice":
+        want_snack = input("Do you want Snacks?").lower()
+        check_snack = string_check(want_snack, yes_no)
+
+    if check_snack == "Yes":
+        desired_snack = ""
+
+        print("Snack options include:")
+        print("A. Popcorn")
+        print("B. M&M's")
+        print("C. Pita Chips")
+        print("D. Orange Juice")
+        print("E. Water")
+        print()
+
+        while desired_snack != "xxx":
+
+            desired_snack = input("Snack: ").lower()
+
+            if desired_snack == "xxx":
+                break
+
+            snack_choice = string_check(desired_snack, valid_snacks)
+            print("Snack Choice: ", snack_choice)
+            print()
+
+            if snack_choice != "xxx" and snack_choice != "invalid choice":
+                snack_order.append(snack_choice)
+
+    print()
+    if len(snack_order) == 0:
+        print("Snacks Ordered: None")
+
+    else:
+        print("Snacks Ordered: ")
+
+        for item in snack_order:
+            print(item)
+
 
 print()
 # calculate ticket price
