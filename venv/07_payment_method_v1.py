@@ -72,6 +72,12 @@ yes_no = [
     ["no", "n"]
 ]
 
+# valid options for payment checker
+payment_types = [
+    ["card"],
+    ["cash"]
+]
+
 snack_order = []
 
 # get details
@@ -160,13 +166,15 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
         for item in snack_order:
             print(item)
 
-    # ask user for which payment method they would like to use
     print()
-    payment_method = string_check("What is your "
-                                     "payment method?", ["card", "cash"])
-    print("Payment Method: ", payment_method)
-    print()
+    check_payment = "invalid choice"
+    while check_payment == "invalid choice":
+        print("What is your payment method?")
+        payment_choice = input("Cash or Card?").lower()
 
+        check_payment = string_check(payment_choice, payment_types)
+        print("Payment Choice: ", (check_payment))
+        print()
 
 print()
 # calculate ticket price

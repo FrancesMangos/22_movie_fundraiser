@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/venv/07_payment_method_v1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/00_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/00_base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/00_sandbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/00_sandbox.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +34,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.00_base">
+  <component name="RunManager" selected="Python.07_payment_method_v1">
     <configuration name="00_base" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="22_movie_fundraiser" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -54,7 +56,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="06_string_checker_v2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="00_sandbox" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="22_movie_fundraiser" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -66,7 +68,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/06_string_checker_v2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/00_sandbox.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -117,7 +119,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="06_string_checker_v5" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="07_payment_method_v1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="22_movie_fundraiser" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -129,7 +131,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/06_string_checker_v5.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/07_payment_method_v1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -140,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.07_payment_method_v1" />
+        <item itemvalue="Python.00_sandbox" />
         <item itemvalue="Python.00_base" />
         <item itemvalue="Python.06_string_checker_v4" />
         <item itemvalue="Python.06_string_checker_v3" />
-        <item itemvalue="Python.06_string_checker_v2" />
-        <item itemvalue="Python.06_string_checker_v5" />
       </list>
     </recent_temporary>
   </component>
@@ -162,7 +164,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="02 not blank done" />
     <MESSAGE value="01 not blank done 2: electric boogaloo" />
     <MESSAGE value="blank, just made" />
     <MESSAGE value="done" />
@@ -187,6 +188,7 @@
     <MESSAGE value="woohoo" />
     <MESSAGE value="aa insurance" />
     <MESSAGE value="pls save" />
-    <option name="LAST_COMMIT_MESSAGE" value="pls save" />
+    <MESSAGE value="added snack checker to base, added quality of life changes too :D" />
+    <option name="LAST_COMMIT_MESSAGE" value="added snack checker to base, added quality of life changes too :D" />
   </component>
 </project>
