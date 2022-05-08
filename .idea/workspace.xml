@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/venv/07_payment_method_v1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/00_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/00_base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/00_sandbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/00_sandbox.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/07_payment_method_v1.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/07_payment_method_v1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +162,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="01 not blank done 2: electric boogaloo" />
     <MESSAGE value="blank, just made" />
     <MESSAGE value="done" />
     <MESSAGE value="v1 done" />
@@ -189,6 +186,7 @@
     <MESSAGE value="aa insurance" />
     <MESSAGE value="pls save" />
     <MESSAGE value="added snack checker to base, added quality of life changes too :D" />
-    <option name="LAST_COMMIT_MESSAGE" value="added snack checker to base, added quality of life changes too :D" />
+    <MESSAGE value="pls" />
+    <option name="LAST_COMMIT_MESSAGE" value="pls" />
   </component>
 </project>

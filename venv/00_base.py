@@ -1,3 +1,5 @@
+# imports go here
+
 # functions go here
 def not_blank(question):
     valid = False
@@ -58,6 +60,7 @@ ticket_sales = 0
 MAX_TICKETS = 5
 
 # lists go here
+# snack options for user to choose from
 valid_snacks = [
     ["popcorn", "p", "corn", "a"],
     ["M&M's", "m&m's", "mms", "m", "b"],
@@ -72,9 +75,16 @@ yes_no = [
     ["no", "n"]
 ]
 
+# payment options for payment checker
+payment_types = [
+    ["card"],
+    ["cash"]
+]
+# snack list for snack checker
 snack_order = []
 
 # get details
+# ask user for name as long as there are tickets remaining
 while name != "xxx" and ticket_count < MAX_TICKETS:
     if ticket_count < MAX_TICKETS - 1:
         print("=====================================")
@@ -160,13 +170,15 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
         for item in snack_order:
             print(item)
 
-    # ask user for which payment method they would like to use
     print()
-    payment_method = string_check("What is your "
-                                     "payment method?", ["card", "cash"])
-    print("Payment Method: ", payment_method)
-    print()
+    check_payment = "invalid choice"
+    while check_payment == "invalid choice":
+        print("What is your payment method?")
+        payment_choice = input("Cash or Card?").lower()
 
+        check_payment = string_check(payment_choice, payment_types)
+        print("Payment Choice: ", (check_payment))
+        print()
 
 print()
 # calculate ticket price
