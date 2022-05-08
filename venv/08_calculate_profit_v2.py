@@ -60,6 +60,7 @@ ticket_sales = 0
 ticket_profit = 0
 MAX_TICKETS = 5
 
+snack_profit = 0
 snack_total = 0
 
 # lists go here
@@ -172,42 +173,27 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
         for item in snack_order:
             print(item)
 
-    if check_snack in valid_snacks[0]:
-        snack_price = 2.50
-        snack_total = snack_total + snack_price
-
-    elif check_snack in valid_snacks[1]:
-        snack_price = 3.00
-        snack_total = snack_total + snack_price
-
-
-    elif check_snack in valid_snacks[2]:
-        snack_price = 4.50
-        snack_total = snack_total + snack_price
-
-    elif check_snack in valid_snacks[3]:
-        snack_price = 3.25
-        snack_total = snack_total + snack_price
-
-    elif check_snack in valid_snacks[4]:
-        snack_price = 2.00
-        snack_total = snack_total + snack_price
-
-    print()
-    check_payment = "invalid choice"
-    while check_payment == "invalid choice":
-        print("What is your payment method?")
-        payment_choice = input("Cash or Card?").lower()
-
-        check_payment = string_check(payment_choice, payment_types)
-        print("Payment Choice: ", (check_payment))
-        print()
-
 print()
 # calculate ticket price
 ticket_profit = ticket_sales - (5 * ticket_count)
 print("Ticket Profit: {:.2f}".format(ticket_profit))
-snack_profit = snack_total
+
+if check_snack in valid_snacks[0]:
+        snack_price = 2.50
+
+elif check_snack in valid_snacks[1]:
+        snack_price = 3.00
+
+elif check_snack in valid_snacks[2]:
+        snack_price = 4.50
+
+elif check_snack in valid_snacks[3]:
+        snack_price = 3.25
+
+elif check_snack in valid_snacks[4]:
+        snack_price = 2.00
+
+snack_profit = snack_profit + snack_price
 print("Snack Profit: {:.2f}".format(snack_profit))
 
 # tell the user of any unsold tickets

@@ -1,3 +1,5 @@
+# imports go here
+
 # functions go here
 def not_blank(question):
     valid = False
@@ -58,6 +60,7 @@ ticket_sales = 0
 MAX_TICKETS = 5
 
 # lists go here
+# snack options for user to choose from
 valid_snacks = [
     ["popcorn", "p", "corn", "a"],
     ["M&M's", "m&m's", "mms", "m", "b"],
@@ -72,15 +75,16 @@ yes_no = [
     ["no", "n"]
 ]
 
-# valid options for payment checker
+# payment options for payment checker
 payment_types = [
     ["card"],
     ["cash"]
 ]
-
+# snack list for snack checker
 snack_order = []
 
 # get details
+# ask user for name as long as there are tickets remaining
 while name != "xxx" and ticket_count < MAX_TICKETS:
     if ticket_count < MAX_TICKETS - 1:
         print("=====================================")
