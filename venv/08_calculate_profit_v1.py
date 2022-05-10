@@ -172,27 +172,6 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
         for item in snack_order:
             print(item)
 
-    if check_snack in valid_snacks[0]:
-        snack_price = 2.50
-        snack_total = snack_total + snack_price
-
-    elif check_snack in valid_snacks[1]:
-        snack_price = 3.00
-        snack_total = snack_total + snack_price
-
-
-    elif check_snack in valid_snacks[2]:
-        snack_price = 4.50
-        snack_total = snack_total + snack_price
-
-    elif check_snack in valid_snacks[3]:
-        snack_price = 3.25
-        snack_total = snack_total + snack_price
-
-    elif check_snack in valid_snacks[4]:
-        snack_price = 2.00
-        snack_total = snack_total + snack_price
-
     print()
     check_payment = "invalid choice"
     while check_payment == "invalid choice":
