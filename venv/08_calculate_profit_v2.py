@@ -60,8 +60,7 @@ ticket_sales = 0
 ticket_profit = 0
 MAX_TICKETS = 5
 
-snack_profit = 0
-snack_total = 0
+snack_sales = 0
 
 # lists go here
 # snack options for user to choose from
@@ -162,6 +161,24 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 
             if snack_choice != "xxx" and snack_choice != "invalid choice":
                 snack_order.append(snack_choice)
+                snack_price = 0
+
+            if desired_snack in valid_snacks[0]:
+                    snack_price = 2.50
+
+            elif desired_snack in valid_snacks[1]:
+                    snack_price = 3.00
+
+            elif desired_snack in valid_snacks[2]:
+                    snack_price = 4.50
+
+            elif desired_snack in valid_snacks[3]:
+                    snack_price = 4.50
+
+            elif desired_snack in valid_snacks[4]:
+                    snack_price = 2.00
+
+            snack_sales = snack_sales + snack_price
 
     print()
     if len(snack_order) == 0:
@@ -178,22 +195,7 @@ print()
 ticket_profit = ticket_sales - (5 * ticket_count)
 print("Ticket Profit: {:.2f}".format(ticket_profit))
 
-if check_snack in valid_snacks[0]:
-        snack_price = 2.50
-
-elif check_snack in valid_snacks[1]:
-        snack_price = 3.00
-
-elif check_snack in valid_snacks[2]:
-        snack_price = 4.50
-
-elif check_snack in valid_snacks[3]:
-        snack_price = 3.25
-
-elif check_snack in valid_snacks[4]:
-        snack_price = 2.00
-
-snack_profit = snack_profit + snack_price
+snack_profit = (snack_sales / 10) * 2
 print("Snack Profit: {:.2f}".format(snack_profit))
 
 # tell the user of any unsold tickets
