@@ -85,8 +85,6 @@ payment_types = [
     ["card"],
     ["cash"]
 ]
-# snack list for snack checker
-snack_order = []
 
 # get details
 # ask user for name as long as there are tickets remaining
@@ -139,6 +137,8 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
         want_snack = input("Do you want Snacks?").lower()
         check_snack = string_check(want_snack, yes_no)
 
+    # snack list for snack checker
+    snack_order = []
     if check_snack == "Yes":
         desired_snack = ""
 
