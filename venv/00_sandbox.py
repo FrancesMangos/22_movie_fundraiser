@@ -6,4 +6,6 @@ valid_snacks = [
     ["water", "w", "e"]
 ]
 
-print(valid_snacks[4])
+variable_one = input("Snack: ")
+if variable_one == valid_snacks[0]:
+    print("Snack: {}".format(valid_snacks[0][0]))
