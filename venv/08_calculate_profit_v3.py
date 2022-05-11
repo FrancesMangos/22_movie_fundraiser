@@ -56,13 +56,13 @@ def string_check(choice, options):
 # variables go here
 name = ""
 ticket_count = 0
-ticket_sales = 0
 ticket_profit = 0
 MAX_TICKETS = 5
+ticket_sales = 0
 
 snack_sales = 0
 
-surcharge = 2
+surcharge_sales = 0
 
 # lists go here
 # snack options for user to choose from
@@ -89,6 +89,8 @@ payment_types = [
 # get details
 # ask user for name as long as there are tickets remaining
 while name != "xxx" and ticket_count < MAX_TICKETS:
+    total_snack_cost = 0
+    total_ticket_cost = 0
     if ticket_count < MAX_TICKETS - 1:
         print("=====================================")
         print("You have {} seats "
@@ -128,6 +130,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 
     ticket_count += 1
     ticket_sales += ticket_price
+    total_ticket_cost += ticket_price
 
     print()
 
@@ -181,6 +184,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
                     snack_price = 2.00
 
             snack_sales = snack_sales + snack_price
+            total_snack_cost = total_snack_cost + snack_price
 
     print()
     if len(snack_order) == 0:
@@ -202,17 +206,19 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
         print("Payment Choice: ", (check_payment))
         print()
 
-    print("Cost of Ticket: {:.2f}".format(ticket_sales))
-    print("Cost of Snacks: {:.2f}".format(snack_sales))
+    print("Cost of Ticket: {:.2f}".format(total_ticket_cost))
+    print("Cost of Snacks: {:.2f}".format(total_snack_cost))
 
-    total_cost = snack_sales + ticket_sales
+    total_cost = total_snack_cost + total_ticket_cost
 
-    if check_payment == "card":
-        total_cost = total_cost + ((total_cost / 100) * 5)
-        print("Cost of Total Order, with Surcharge: {:.2f}".format(total_cost))
-
-    else:
+    if payment_choice == "cash":
         print("Cost of Total Order: {:.2f}".format(total_cost))
+
+    elif payment_choice == "card":
+        total_cost_surcharge = total_cost + ((total_cost / 100) * 5)
+        surcharge_sales = (total_cost / 100) * 5
+        print("Cost of Total Order, with Surcharge: {:.2f}".format(total_cost_surcharge))
+
 
 print()
 # calculate ticket price
@@ -222,6 +228,8 @@ print("Ticket Profit: {:.2f}".format(ticket_profit))
 snack_profit = (snack_sales / 10) * 2
 print("Snack Profit: {:.2f}".format(snack_profit))
 
+surcharge_profit = surcharge_sales
+print("Surcharge Profit: {:.2f}".format(surcharge_profit))
 
 # tell the user of any unsold tickets
 print()
