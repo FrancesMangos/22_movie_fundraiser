@@ -56,8 +56,15 @@ def string_check(choice, options):
 # variables go here
 name = ""
 ticket_count = 0
-ticket_sales = 0
+ticket_profit = 0
 MAX_TICKETS = 5
+ticket_sales = 0
+
+snack_sales = 0
+
+surcharge = 5
+surcharge_sales = 0
+surcharge_profit = 0
 
 # lists go here
 # snack options for user to choose from
@@ -80,12 +87,12 @@ payment_types = [
     ["card"],
     ["cash"]
 ]
-# snack list for snack checker
-snack_order = []
 
 # get details
 # ask user for name as long as there are tickets remaining
 while name != "xxx" and ticket_count < MAX_TICKETS:
+    total_snack_cost = 0
+    total_ticket_cost = 0
     if ticket_count < MAX_TICKETS - 1:
         print("=====================================")
         print("You have {} seats "
@@ -123,9 +130,9 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     else:
         ticket_price = 6.5
 
-
     ticket_count += 1
     ticket_sales += ticket_price
+    total_ticket_cost += ticket_price
 
     print()
 
@@ -135,6 +142,8 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
         want_snack = input("Do you want Snacks?").lower()
         check_snack = string_check(want_snack, yes_no)
 
+    # snack list for snack checker
+    snack_order = []
     if check_snack == "Yes":
         desired_snack = ""
 
@@ -159,6 +168,25 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 
             if snack_choice != "xxx" and snack_choice != "invalid choice":
                 snack_order.append(snack_choice)
+                snack_price = 0
+
+            if desired_snack in valid_snacks[0]:
+                snack_price = 2.50
+
+            elif desired_snack in valid_snacks[1]:
+                snack_price = 3.00
+
+            elif desired_snack in valid_snacks[2]:
+                snack_price = 4.50
+
+            elif desired_snack in valid_snacks[3]:
+                snack_price = 4.50
+
+            elif desired_snack in valid_snacks[4]:
+                snack_price = 2.00
+
+            snack_sales = snack_sales + snack_price
+            total_snack_cost = total_snack_cost + snack_price
 
     print()
     if len(snack_order) == 0:
@@ -180,12 +208,36 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
         print("Payment Choice: ", (check_payment))
         print()
 
+    print("Cost of Ticket: {:.2f}".format(total_ticket_cost))
+    print("Cost of Snacks: {:.2f}".format(total_snack_cost))
+
+    total_cost = total_snack_cost + total_ticket_cost
+
+    # determine which payment option the user chose
+    if payment_choice == "cash":
+        print("Cost of Total Order: {:.2f}".format(total_cost))
+
+    elif payment_choice == "card":
+        total_cost_surcharge = total_cost + ((total_cost / 100) * surcharge)
+        surcharge_sales = (total_cost / 100) * surcharge
+        surcharge_profit = surcharge_profit + surcharge_sales
+        print("Cost of Total Order, with Surcharge: {:.2f}".format(total_cost_surcharge))
+
+
 print()
-# calculate ticket price
+# calculate profit from tickets
 ticket_profit = ticket_sales - (5 * ticket_count)
 print("Ticket Profit: {:.2f}".format(ticket_profit))
 
+# calculate profit from snacks
+snack_profit = (snack_sales / 10) * 2
+print("Snack Profit: {:.2f}".format(snack_profit))
+
+# calculate profit from surcharge
+print("Surcharge Profit: {:.2f}".format(surcharge_profit))
+
 # tell the user of any unsold tickets
+print()
 if ticket_count == MAX_TICKETS:
     print("You have sold all the available tickets!")
 else:
