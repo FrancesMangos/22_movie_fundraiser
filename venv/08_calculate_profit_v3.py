@@ -171,19 +171,19 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
                 snack_price = 0
 
             if desired_snack in valid_snacks[0]:
-                    snack_price = 2.50
+                snack_price = 2.50
 
             elif desired_snack in valid_snacks[1]:
-                    snack_price = 3.00
+                snack_price = 3.00
 
             elif desired_snack in valid_snacks[2]:
-                    snack_price = 4.50
+                snack_price = 4.50
 
             elif desired_snack in valid_snacks[3]:
-                    snack_price = 4.50
+                snack_price = 4.50
 
             elif desired_snack in valid_snacks[4]:
-                    snack_price = 2.00
+                snack_price = 2.00
 
             snack_sales = snack_sales + snack_price
             total_snack_cost = total_snack_cost + snack_price
@@ -213,6 +213,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 
     total_cost = total_snack_cost + total_ticket_cost
 
+    # determine which payment option the user chose
     if payment_choice == "cash":
         print("Cost of Total Order: {:.2f}".format(total_cost))
 
@@ -224,14 +225,15 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 
 
 print()
-# calculate ticket price
+# calculate profit from tickets
 ticket_profit = ticket_sales - (5 * ticket_count)
 print("Ticket Profit: {:.2f}".format(ticket_profit))
 
+# calculate profit from snacks
 snack_profit = (snack_sales / 10) * 2
 print("Snack Profit: {:.2f}".format(snack_profit))
 
-
+# calculate profit from surcharge
 print("Surcharge Profit: {:.2f}".format(surcharge_profit))
 
 # tell the user of any unsold tickets
