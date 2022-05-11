@@ -45,13 +45,15 @@ if check_snack == "Yes":
 
     while desired_snack != "xxx":
 
-        desired_snack = input("Snack: ").lower()
+        num_snacks, desired_snack = input("Snack: ").split()
+        desired_snack = desired_snack.lower()
 
         if desired_snack == "xxx":
             break
 
         snack_choice = string_check(desired_snack, valid_snacks)
-        print("Snack Choice: ", snack_choice)
+
+        print("Number of {} is {}".format(snack_choice, num_snacks))
 
         if snack_choice != "xxx" and snack_choice != "invalid choice":
             snack_order.append(snack_choice)
