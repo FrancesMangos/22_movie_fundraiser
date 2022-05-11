@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/venv/08_calculate_profit_v3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/00_sandbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/00_sandbox.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/08_calculate_profit_v1.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/08_calculate_profit_v1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/08_calculate_profit_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/08_calculate_profit_v2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/08_calculate_profit_v3.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/08_calculate_profit_v3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,8 +141,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.08_calculate_profit_v3" />
-        <item itemvalue="Python.08_calculate_profit_v2" />
         <item itemvalue="Python.00_sandbox" />
+        <item itemvalue="Python.08_calculate_profit_v2" />
         <item itemvalue="Python.08_calculate_profit_v1" />
         <item itemvalue="Python.07_payment_method_v1" />
       </list>
@@ -165,12 +162,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v1 done" />
-    <MESSAGE value="added comments to v1" />
-    <MESSAGE value="v2 done" />
-    <MESSAGE value="actually version 2" />
-    <MESSAGE value="actually version 1" />
-    <MESSAGE value="the trilogy is finished" />
     <MESSAGE value="num v1 done" />
     <MESSAGE value="created base program" />
     <MESSAGE value="ooo" />
@@ -190,6 +181,12 @@
     <MESSAGE value="pls" />
     <MESSAGE value="poggers" />
     <MESSAGE value="im so confused" />
-    <option name="LAST_COMMIT_MESSAGE" value="im so confused" />
+    <MESSAGE value="need to work out surcharge" />
+    <MESSAGE value="worked out cost of ticket previously" />
+    <MESSAGE value="worked out cost of snacks" />
+    <MESSAGE value="commited the commit" />
+    <MESSAGE value="problem when having more than one user" />
+    <MESSAGE value="lets goooooooooooooooooooooooooooooooooooooooooooooo" />
+    <option name="LAST_COMMIT_MESSAGE" value="lets goooooooooooooooooooooooooooooooooooooooooooooo" />
   </component>
 </project>

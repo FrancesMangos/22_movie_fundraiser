@@ -62,7 +62,9 @@ ticket_sales = 0
 
 snack_sales = 0
 
+surcharge = 5
 surcharge_sales = 0
+surcharge_profit = 0
 
 # lists go here
 # snack options for user to choose from
@@ -215,8 +217,9 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
         print("Cost of Total Order: {:.2f}".format(total_cost))
 
     elif payment_choice == "card":
-        total_cost_surcharge = total_cost + ((total_cost / 100) * 5)
-        surcharge_sales = (total_cost / 100) * 5
+        total_cost_surcharge = total_cost + ((total_cost / 100) * surcharge)
+        surcharge_sales = (total_cost / 100) * surcharge
+        surcharge_profit = surcharge_profit + surcharge_sales
         print("Cost of Total Order, with Surcharge: {:.2f}".format(total_cost_surcharge))
 
 
@@ -228,7 +231,7 @@ print("Ticket Profit: {:.2f}".format(ticket_profit))
 snack_profit = (snack_sales / 10) * 2
 print("Snack Profit: {:.2f}".format(snack_profit))
 
-surcharge_profit = surcharge_sales
+
 print("Surcharge Profit: {:.2f}".format(surcharge_profit))
 
 # tell the user of any unsold tickets
