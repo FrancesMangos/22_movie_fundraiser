@@ -183,9 +183,9 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
             print("Snack Choice: ", snack_choice)
             print()
 
+            snack_price = 0
             if snack_choice != "xxx" and snack_choice != "invalid choice":
                 snack_order.append(snack_choice)
-                snack_price = 0
 
             if desired_snack in valid_snacks[0]:
                 snack_price = 2.50
@@ -244,6 +244,12 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     all_tickets.append(ticket_price)
     all_snacks.append(total_snack_cost)
 
+# PRINT DETAILS
+print()
+print("=====================================")
+movie_frame = pandas.DataFrame(movie_data_dict)
+print(movie_frame)
+
 print()
 # calculate profit from tickets
 ticket_profit = ticket_sales - (5 * ticket_count)
@@ -255,11 +261,6 @@ print("Snack Profit: {:.2f}".format(snack_profit))
 
 # calculate profit from surcharge
 print("Surcharge Profit: {:.2f}".format(surcharge_profit))
-
-print()
-# PRINT DETAILS
-movie_frame = pandas.DataFrame(movie_data_dict)
-print(movie_frame)
 
 # tell the user of any unsold tickets
 print()
