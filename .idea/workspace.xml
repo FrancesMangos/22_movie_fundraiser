@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/09_snack_tracker_v1.py" beforeDir="false" />
-    </list>
+    <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,7 +153,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="rpg" />
     <MESSAGE value="created and finished ticket rpice" />
     <MESSAGE value="added ticket price to base" />
     <MESSAGE value="cow mitten" />
@@ -181,6 +177,7 @@
     <MESSAGE value="added calc profit" />
     <MESSAGE value="created snack checker" />
     <MESSAGE value="trying to count how many snacks user wants by splitting input - status: sad" />
-    <option name="LAST_COMMIT_MESSAGE" value="trying to count how many snacks user wants by splitting input - status: sad" />
+    <MESSAGE value="this is very cool ngl" />
+    <option name="LAST_COMMIT_MESSAGE" value="this is very cool ngl" />
   </component>
 </project>
