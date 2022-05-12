@@ -1,6 +1,7 @@
-# imports go here
+# IMPORTS GO HERE
+import pandas
 
-# functions go here
+# FUNCTIONS GO HERE
 def not_blank(question):
     valid = False
 
@@ -62,11 +63,24 @@ ticket_sales = 0
 
 snack_sales = 0
 
-surcharge = 5
+SURCHARGE = 5
 surcharge_sales = 0
 surcharge_profit = 0
 
-# lists go here
+# initialise lists
+all_names = []
+all_tickets = []
+all_snacks = []
+
+# DATA FRAME DICTIONARY
+movie_data_dict = {
+    'Name': all_names,
+    'Ticket': all_tickets,
+    'Snacks': all_snacks
+}
+
+# LISTS GO HERE
+
 # snack options for user to choose from
 valid_snacks = [
     ["popcorn", "p", "corn", "a"],
@@ -88,6 +102,9 @@ payment_types = [
     ["cash"]
 ]
 
+
+# MAIN PROGRAM STARTS HERE
+
 # get details
 # ask user for name as long as there are tickets remaining
 while name != "xxx" and ticket_count < MAX_TICKETS:
@@ -103,10 +120,10 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
         print("*** There is only ONE seat left! ***")
 
     # get name, cannot be blank
-    name = not_blank("Name:")
+    name = not_blank("Name:").title()
 
     # continue program if name is not exit code
-    if name == "xxx":
+    if name == "Xxx":
         break
 
     # get age, between 12 and 130
@@ -218,11 +235,14 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
         print("Cost of Total Order: {:.2f}".format(total_cost))
 
     elif payment_choice == "card":
-        total_cost_surcharge = total_cost + ((total_cost / 100) * surcharge)
-        surcharge_sales = (total_cost / 100) * surcharge
+        total_cost_surcharge = total_cost + ((total_cost / 100) * SURCHARGE)
+        surcharge_sales = (total_cost / 100) * SURCHARGE
         surcharge_profit = surcharge_profit + surcharge_sales
         print("Cost of Total Order, with Surcharge: {:.2f}".format(total_cost_surcharge))
 
+    all_names.append(name)
+    all_tickets.append(ticket_price)
+    all_snacks.append(total_snack_cost)
 
 print()
 # calculate profit from tickets
@@ -235,6 +255,11 @@ print("Snack Profit: {:.2f}".format(snack_profit))
 
 # calculate profit from surcharge
 print("Surcharge Profit: {:.2f}".format(surcharge_profit))
+
+print()
+# PRINT DETAILS
+movie_frame = pandas.DataFrame(movie_data_dict)
+print(movie_frame)
 
 # tell the user of any unsold tickets
 print()
