@@ -10,8 +10,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Python Unit Test" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -30,8 +30,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.09_data_intergration_v1">
-    <configuration name="00_sandbox" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.00_base">
+    <configuration name="00_base" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="22_movie_fundraiser" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -43,7 +43,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/00_sandbox.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/00_base.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -131,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.00_base" />
         <item itemvalue="Python.09_data_intergration_v1" />
         <item itemvalue="Python tests.Unittests in 09_data_intergration_v1.py" />
         <item itemvalue="Python.09_snack_tracker_v1" />
         <item itemvalue="Python.08_calculate_profit_v3" />
-        <item itemvalue="Python.00_sandbox" />
       </list>
     </recent_temporary>
   </component>
@@ -153,8 +153,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created and finished ticket rpice" />
-    <MESSAGE value="added ticket price to base" />
     <MESSAGE value="cow mitten" />
     <MESSAGE value="yus" />
     <MESSAGE value="commit arson, not really tho" />
@@ -178,6 +176,8 @@
     <MESSAGE value="created snack checker" />
     <MESSAGE value="trying to count how many snacks user wants by splitting input - status: sad" />
     <MESSAGE value="this is very cool ngl" />
-    <option name="LAST_COMMIT_MESSAGE" value="this is very cool ngl" />
+    <MESSAGE value="pandas is poggers" />
+    <MESSAGE value="wot dis" />
+    <option name="LAST_COMMIT_MESSAGE" value="wot dis" />
   </component>
 </project>

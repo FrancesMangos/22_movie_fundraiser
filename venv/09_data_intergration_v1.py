@@ -71,12 +71,14 @@ surcharge_profit = 0
 all_names = []
 all_tickets = []
 all_snacks = []
+all_surcharge = []
 
 # DATA FRAME DICTIONARY
 movie_data_dict = {
     'Name': all_names,
     'Ticket': all_tickets,
-    'Snacks': all_snacks
+    'Snacks': all_snacks,
+    'Surcharge': all_surcharge
 }
 
 # LISTS GO HERE
@@ -243,6 +245,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     all_names.append(name)
     all_tickets.append(ticket_price)
     all_snacks.append(total_snack_cost)
+    all_surcharge.append(surcharge_profit)
 
 print()
 # calculate profit from tickets
