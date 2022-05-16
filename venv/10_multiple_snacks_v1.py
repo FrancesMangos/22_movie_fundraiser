@@ -55,7 +55,7 @@ for client_order in test_data:
         if len(item) > 0:
             to_find = (item[1])
             amount = (item[0])
-            add_list = snack_menu_dict(to_find)
+            add_list = snack_menu_dict[to_find]
             add_list[-1] = amount
 
 print()
