@@ -1,7 +1,10 @@
 # IMPORTS GO HERE
 import pandas
 
+# ==================================================
 # FUNCTIONS GO HERE
+
+
 def not_blank(question):
     valid = False
 
@@ -53,8 +56,8 @@ def string_check(choice, options):
     else:
         return "invalid choice"
 
-
-# variables go here
+# ==================================================
+# VARIABLES
 name = ""
 ticket_count = 0
 ticket_profit = 0
@@ -67,13 +70,15 @@ SURCHARGE = 5
 surcharge_sales = 0
 surcharge_profit = 0
 
+# ==================================================
+# DATAFRAME SHENANIGANS
 # initialise lists
 all_names = []
 all_tickets = []
 all_snacks = []
 all_surcharge = []
 
-# DATA FRAME DICTIONARY
+# dataframe dictionary
 movie_data_dict = {
     'Name': all_names,
     'Ticket': all_tickets,
@@ -81,8 +86,8 @@ movie_data_dict = {
     'Surcharge': all_surcharge
 }
 
+# ==================================================
 # LISTS GO HERE
-
 # snack options for user to choose from
 valid_snacks = [
     ["popcorn", "p", "corn", "a"],
@@ -105,8 +110,8 @@ payment_types = [
 ]
 
 
+# ==================================================
 # MAIN PROGRAM STARTS HERE
-
 # get details
 # ask user for name as long as there are tickets remaining
 while name != "xxx" and ticket_count < MAX_TICKETS:
@@ -124,6 +129,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     # get name, cannot be blank
     name = not_blank("Name:").title()
 
+# ==================================================
     # continue program if name is not exit code
     if name == "Xxx":
         break
@@ -153,6 +159,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     ticket_sales += ticket_price
     total_ticket_cost += ticket_price
 
+# ==================================================
     print()
 
     # ask user if they want a snack
@@ -217,6 +224,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
         for item in snack_order:
             print(item)
 
+# ==================================================
     print()
     check_payment = "invalid choice"
     while check_payment == "invalid choice":
@@ -242,6 +250,8 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
         surcharge_profit = surcharge_profit + surcharge_sales
         print("Cost of Total Order, with Surcharge: {:.2f}".format(total_cost_surcharge))
 
+# ==================================================
+    # add user details to dataframe
     all_names.append(name)
     all_tickets.append(ticket_price)
     all_snacks.append(total_snack_cost)

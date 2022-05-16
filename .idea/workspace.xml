@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="" />
+    <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/10_multiple_snacks_v1.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/10_multiple_snacks_v1.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +33,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.00_base">
+  <component name="RunManager" selected="Python.09_data_intergration_v1">
     <configuration name="00_base" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="22_movie_fundraiser" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -131,8 +134,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.00_base" />
         <item itemvalue="Python.09_data_intergration_v1" />
+        <item itemvalue="Python.00_base" />
         <item itemvalue="Python tests.Unittests in 09_data_intergration_v1.py" />
         <item itemvalue="Python.09_snack_tracker_v1" />
         <item itemvalue="Python.08_calculate_profit_v3" />
@@ -153,7 +156,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cow mitten" />
     <MESSAGE value="yus" />
     <MESSAGE value="commit arson, not really tho" />
     <MESSAGE value="same thing for now" />
@@ -178,6 +180,7 @@
     <MESSAGE value="this is very cool ngl" />
     <MESSAGE value="pandas is poggers" />
     <MESSAGE value="wot dis" />
-    <option name="LAST_COMMIT_MESSAGE" value="wot dis" />
+    <MESSAGE value="added surcharge" />
+    <option name="LAST_COMMIT_MESSAGE" value="added surcharge" />
   </component>
 </project>
