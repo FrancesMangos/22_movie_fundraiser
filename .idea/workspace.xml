@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/10_multiple_snacks_v1.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/10_multiple_snacks_v1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -156,8 +155,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="commit arson, not really tho" />
-    <MESSAGE value="same thing for now" />
     <MESSAGE value="woohoo" />
     <MESSAGE value="aa insurance" />
     <MESSAGE value="pls save" />
@@ -181,6 +178,8 @@
     <MESSAGE value="wot dis" />
     <MESSAGE value="added surcharge" />
     <MESSAGE value="tidying up" />
-    <option name="LAST_COMMIT_MESSAGE" value="tidying up" />
+    <MESSAGE value="snacks" />
+    <MESSAGE value="IT WORKSSSSSSSSSS" />
+    <option name="LAST_COMMIT_MESSAGE" value="IT WORKSSSSSSSSSS" />
   </component>
 </project>

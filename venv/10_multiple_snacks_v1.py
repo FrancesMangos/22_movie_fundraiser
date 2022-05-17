@@ -41,7 +41,6 @@ valid_snacks = [
     ["water", "w", "e"]
 ]
 
-
 count = 0
 for client_order in test_data:
 
