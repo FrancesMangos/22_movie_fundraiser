@@ -255,7 +255,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     all_names.append(name)
     all_tickets.append(ticket_price)
     all_snacks.append(total_snack_cost)
-    all_surcharge.append(surcharge_profit)
+    all_surcharge.append(surcharge_sales)
 
 print()
 # calculate profit from tickets

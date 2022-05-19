@@ -193,23 +193,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
         want_snack = input("Do you want Snacks?").lower()
         check_snack = string_check(want_snack, yes_no)
 
-    # snack list for snack checker
-    snack_order = []
-    if check_snack == "Yes":
-        snack_order = input("Snack: ")
 
-    else:
-        snack_order = []
-
-    for item in snack_lists:
-        item.append(0)
-
-    for item in snack_order:
-        if len(item) > 0:
-            to_find = (item[1])
-            amount = (item[0])
-            add_list = movie_data_dict[to_find]
-            add_list[-1] = amount
 
 # ==================================================
     print()
@@ -259,9 +243,6 @@ movie_frame["Sub Total"] = \
     movie_frame['Pita Chips']*price_dict['Pita Chips'] + \
     movie_frame['Orange Juice']*price_dict['Orange Juice'] + \
     movie_frame['Water']*price_dict['Water']
-
-movie_frame = movie_frame.rename(columns={'Orange Juice': 'OJ',
-                                      'Pita Chips': 'Chips'}, inplace = True)
 print(movie_frame)
 
 # ==================================================
