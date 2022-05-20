@@ -72,18 +72,56 @@ surcharge_profit = 0
 
 # ==================================================
 # DATAFRAME SHENANIGANS
-# initialise lists
+# initialise details lists
 all_names = []
 all_tickets = []
 all_snacks = []
 all_surcharge = []
+
+surcharge_mult_list = []
+
+# initialise snack lists
+popcorn = []
+mms = []
+pita_chips = []
+orange_juice = []
+water = []
+
+snack_lists = [popcorn, mms, pita_chips, orange_juice, water]
+
+# lists to store summary data
+summary_headings = ["Popcorn", "M&Ms", "Pita Chips",
+                    "Orange Juice", "Snack Profit", "Ticket Profit",
+                    "Total Profit",]
+
+summary_data = []
 
 # dataframe dictionary
 movie_data_dict = {
     'Name': all_names,
     'Ticket': all_tickets,
     'Snacks': all_snacks,
-    'Surcharge': all_surcharge
+    'Surcharge': all_surcharge,
+    'Popcorn': popcorn,
+    'M&Ms': mms,
+    'Pita Chips': pita_chips,
+    'Orange Juice': orange_juice,
+    'Water': water,
+    'Surcharge_Multiplier': surcharge_mult_list
+}
+
+price_dict = {
+    'Popcorn': 2.5,
+    'M&Ms': 3,
+    'Pita Chips': 4.5,
+    'Orange Juice': 4.5,
+    'Water': 2,
+}
+
+# summary dictionary
+summary_data_dict = {
+    'Item': summary_headings,
+    'Amount': summary_data
 }
 
 # ==================================================
@@ -170,49 +208,22 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 
     # snack list for snack checker
     snack_order = []
+    count = 0
     if check_snack == "Yes":
-        desired_snack = ""
+        snack_order = ("Snack: ")
 
-        print("Snack options include:")
-        print("A. Popcorn")
-        print("B. M&M's")
-        print("C. Pita Chips")
-        print("D. Orange Juice")
-        print("E. Water")
-        print()
+    for item in snack_lists:
+        item.append(0)
 
-        while desired_snack != "xxx":
+    snack_order = movie_data_dict[count]
+    count += 1
 
-            desired_snack = input("Snack: ").lower()
-
-            if desired_snack == "xxx":
-                break
-
-            snack_choice = string_check(desired_snack, valid_snacks)
-            print("Snack Choice: ", snack_choice)
-            print()
-
-            if snack_choice != "xxx" and snack_choice != "invalid choice":
-                snack_order.append(snack_choice)
-                snack_price = 0
-
-            if desired_snack in valid_snacks[0]:
-                snack_price = 2.50
-
-            elif desired_snack in valid_snacks[1]:
-                snack_price = 3.00
-
-            elif desired_snack in valid_snacks[2]:
-                snack_price = 4.50
-
-            elif desired_snack in valid_snacks[3]:
-                snack_price = 4.50
-
-            elif desired_snack in valid_snacks[4]:
-                snack_price = 2.00
-
-            snack_sales = snack_sales + snack_price
-            total_snack_cost = total_snack_cost + snack_price
+    for item in snack_order:
+        if len(item) > 0:
+            to_find = (item[1])
+            amount = (item[0])
+            add_list = movie_data_dict[to_find]
+            add_list[-1] = amount
 
     print()
     if len(snack_order) == 0:
@@ -252,27 +263,51 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 
 # ==================================================
     # add user details to dataframe
-    all_names.append(name)
-    all_tickets.append(ticket_price)
-    all_snacks.append(total_snack_cost)
-    all_surcharge.append(surcharge_sales)
+print()
+# PRINT DETAILS
+movie_frame = pandas.DataFrame(movie_data_dict)
+movie_frame = movie_frame.set_index('Name')
 
+movie_frame["Snacks"] = \
+    movie_frame['Popcorn']*price_dict['Popcorn'] + \
+    movie_frame['M&Ms']*price_dict['M&Ms'] + \
+    movie_frame['Pita Chips']*price_dict['Pita Chips'] + \
+    movie_frame['Orange Juice']*price_dict['Orange Juice'] + \
+    movie_frame['Water']*price_dict['Water']
+
+movie_frame["Sub Total"] = \
+    movie_frame['Ticket'] + \
+    movie_frame['Snacks']
+
+movie_frame["Surcharge"] = \
+    movie_frame["Sub Total"] * movie_frame[SURCHARGE]
+
+for item in snack_lists:
+    summary_data.append(sum(item))
+
+snack_total = movie_frame['Snacks'].sum()
+snack_profit = snack_total * 0.2
+summary_data.append(snack_profit)
+
+ticket_profit = ticket_sales - (5 * ticket_count)
+summary_data.append(ticket_profit)
+
+all_names.append(name)
+
+
+print(movie_frame)
+
+# ==================================================
 print()
 # calculate profit from tickets
-ticket_profit = ticket_sales - (5 * ticket_count)
 print("Ticket Profit: {:.2f}".format(ticket_profit))
 
 # calculate profit from snacks
-snack_profit = (snack_sales / 10) * 2
 print("Snack Profit: {:.2f}".format(snack_profit))
 
 # calculate profit from surcharge
 print("Surcharge Profit: {:.2f}".format(surcharge_profit))
 
-print()
-# PRINT DETAILS
-movie_frame = pandas.DataFrame(movie_data_dict)
-print(movie_frame)
 
 # tell the user of any unsold tickets
 print()
