@@ -15,4 +15,4 @@ def string_checker(question, to_check):
 
                     return item
 
-        print("Sorry! That is not a valid response!")
+        print("sorry that is not a valid response")
