@@ -28,7 +28,6 @@ yes_no = [
     ["no", "n"]
 ]
 
-
 check_snack = "invalid choice"
 while check_snack == "invalid choice":
     want_snack = input("Do you want Snacks?").lower()
