@@ -77,6 +77,10 @@ def get_snack():
             print()
             snack_order.append(snack_row)
 
+        else:
+            print("Sorry - What you entered is invalid!")
+            print()
+
 # valid options for yes/no questions
 yes_no = [
     ["yes", "y"],
@@ -93,6 +97,13 @@ while check_snack == "invalid choice":
     check_snack = string_check(want_snack, yes_no)
 
 if check_snack == "Yes":
+    print("Snack options include:")
+    print("A. Popcorn")
+    print("B. M&M's")
+    print("C. Pita Chips")
+    print("D. Orange Juice")
+    print("E. Water")
+    print()
     snack_order = get_snack()
 
 else:
