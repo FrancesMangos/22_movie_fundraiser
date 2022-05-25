@@ -4,7 +4,6 @@ import pandas
 
 # ==================================================
 # FUNCTIONS GO HERE
-# functions go here
 
 
 def not_blank(question):
@@ -19,6 +18,7 @@ def not_blank(question):
         # prints error message if name is blank
         else:
             print("Cannot be blank!")
+            print()
 
 
 def int_check(question):
@@ -55,8 +55,6 @@ def check_tickets(tickets_sold, ticket_limit):
 
 
 def get_ticket_price():
-
-    # get age between 12 and 130
     age = int_check("Age:")
     print()
 
@@ -78,6 +76,8 @@ def get_ticket_price():
 
     else:
         ticket_price = 6.5
+
+    return ticket_price
 
 # ==================================================
 # VARIABLES GO HERE
@@ -91,47 +91,59 @@ ticket_count = 0
 ticket_sales = 0
 
 # ==================================================
+# DATAFRAME STUFF GOES HERE
+
+all_names = []
+all_tickets = []
+
+movie_data_dict = {
+    'Name': all_names,
+    'Ticket': all_tickets
+}
+
+# ==================================================
+# LISTS GO HERE
+
+
+# ==================================================
 # MAIN PROGRAM STARTS HERE
 # execute program if exit code has not been received and there are tickets left
 while name != "xxx" and ticket_count < MAX_TICKETS:
-    if ticket_count < 4:
-        print("You have {} seats "
-              "left".format(MAX_TICKETS - ticket_count))
 
-    # warns user that there is only one seat left
-    else:
-        print("*** There is only ONE seat left! ***")
+    # check that number of tickets has not been exceeded
+    check_tickets(ticket_count, MAX_TICKETS)
 
     # GET DETAILS
     # get name, cannot be blank
     name = not_blank("Name:")
     print()
 
-    # get age between 12 and 130
-    age = int_check("Age:")
-    print()
-
-    if age < 12:
-        print("Sorry - You are too young for this movie.")
-        print()
+    if name == "xxx":
         continue
 
-    if age > 130:
-        print("Sorry - Your input is too big, it looks like a mistake")
-        print()
+    ticket_price = get_ticket_price()
+
+    if ticket_price == "invalid ticket price":
         continue
-
-    if age < 16:
-        ticket_price = 7.5
-
-    elif age < 65:
-        ticket_price = 10.5
-
-    else:
-        ticket_price = 6.5
 
     ticket_count += 1
+    ticket_sales += ticket_price
     print()
+
+# ==================================================
+# DATAFRAME PRINTS HERE
+    name = name.title()
+    all_names.append(name)
+    all_tickets.append(ticket_price)
+
+movie_frame = pandas.DataFrame(movie_data_dict)
+print(movie_frame)
+print()
+
+# ==================================================
+# POST MAIN PROGRAM GOES HERE
+ticket_profit = ticket_sales - (5 * ticket_count)
+print("Ticket Profit: ${:.2f}".format(ticket_profit))
 
 if ticket_count == MAX_TICKETS:
     print("You have sold all the available tickets!")
