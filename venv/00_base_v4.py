@@ -203,6 +203,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     # check that number of tickets has not been exceeded
     check_tickets(ticket_count, MAX_TICKETS)
 
+# ==================================================
     # GET DETAILS
     # ask user for name
     # name cannot be blank
@@ -211,6 +212,8 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 
     if name == "xxx":
         continue
+
+# ==================================================
     # ask user for age
     # make sure age is within range
     # determine ticket price according to age
@@ -223,6 +226,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     ticket_sales += ticket_price
     print()
 
+# ==================================================
     # ask user if they want a snacks
     check_snack = "invalid choice"
     while check_snack == "invalid choice":
