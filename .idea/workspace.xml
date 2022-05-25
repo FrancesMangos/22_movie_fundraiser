@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/venv/00_base_discontinued.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/00_base_v3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/00_base.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/00_base_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/00_base_v2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/08_payment_method_v1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/09_calculate_profit_v1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/09_calculate_profit_v2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/09_calculate_profit_v3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/00_base_v3.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/00_base_v3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,10 +174,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixed some exclamation marks" />
-    <MESSAGE value="added calc profit" />
-    <MESSAGE value="created snack checker" />
-    <MESSAGE value="trying to count how many snacks user wants by splitting input - status: sad" />
     <MESSAGE value="this is very cool ngl" />
     <MESSAGE value="pandas is poggers" />
     <MESSAGE value="wot dis" />
@@ -207,6 +195,10 @@
     <MESSAGE value="i wanna cry" />
     <MESSAGE value="i wanna cry but less" />
     <MESSAGE value="lets go" />
-    <option name="LAST_COMMIT_MESSAGE" value="lets go" />
+    <MESSAGE value="deleted" />
+    <MESSAGE value="discontinued" />
+    <MESSAGE value="new base" />
+    <MESSAGE value="technically version two" />
+    <option name="LAST_COMMIT_MESSAGE" value="technically version two" />
   </component>
 </project>

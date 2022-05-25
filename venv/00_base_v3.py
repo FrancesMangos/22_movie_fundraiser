@@ -1,9 +1,12 @@
 # IMPORTS GO HERE
-
+import re
+import pandas
 
 # ==================================================
 # FUNCTIONS GO HERE
 # functions go here
+
+
 def not_blank(question):
     valid = False
 
@@ -39,13 +42,52 @@ def int_check(question):
             print(error)
 
 
+def check_tickets(tickets_sold, ticket_limit):
+    # tells user how seats are left
+    if tickets_sold < ticket_limit - 1:
+        print("You have {} seats "
+              "left".format(ticket_limit - tickets_sold))
+
+    else:
+        print("*** There is only ONE seat left! ***")
+
+    return ""
+
+
+def get_ticket_price():
+
+    # get age between 12 and 130
+    age = int_check("Age:")
+    print()
+
+    if age < 12:
+        print("Sorry - You are too young for this movie.")
+        print()
+        return "invalid ticket price"
+
+    if age > 130:
+        print("Sorry - Your input is too big, it looks like a mistake")
+        print()
+        return "invalid ticket price"
+
+    if age < 16:
+        ticket_price = 7.5
+
+    elif age < 65:
+        ticket_price = 10.5
+
+    else:
+        ticket_price = 6.5
+
 # ==================================================
 # VARIABLES GO HERE
+
+
+MAX_TICKETS = 5
+
 name = ""
 
 ticket_count = 0
-
-MAX_TICKETS = 5
 ticket_sales = 0
 
 # ==================================================
