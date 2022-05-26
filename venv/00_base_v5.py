@@ -198,6 +198,12 @@ yes_no = [
 # holds snack order for a single user
 snack_order = []
 
+# valid options for cash/card checker
+payment_method = [
+    ["cash", "ca"],
+    ["card", "cr"]
+]
+
 # ==================================================
 # MAIN PROGRAM STARTS HERE
 # execute program if exit code has not been received and there are tickets left
@@ -264,7 +270,15 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 
 # ==================================================
     # ASK FOR PAYMENT METHOD + SURCHARGE
+    how_pay = "invalid choice"
+    while how_pay == "invalid choice":
+        how_pay = input("Please choose a payment method - cash/card")
+        how_pay = string_check(how_pay, payment_method)
 
+    if how_pay == "Credit":
+        surcharge_multiplier = 0.05
+    else:
+        surcharge_multiplier = 0
 
 # ==================================================
 # DATAFRAME PRINTS HERE
