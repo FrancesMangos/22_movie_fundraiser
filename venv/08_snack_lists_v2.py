@@ -1,3 +1,5 @@
+import pandas
+
 # initialise snack lists
 
 names = ["Short", "Long", "Sheet", "Stuffed", "Dumpling"]
@@ -48,7 +50,6 @@ print("M&Ms: ", snack_lists[1])
 print("Pita Chips: ", snack_lists[2])
 print("Orange Juice: ", snack_lists[3])
 print("Water: ", snack_lists[4])
-
 
 
 
