@@ -205,7 +205,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 
 # ==================================================
     # GET DETAILS
-    # ask user for name
+    # ASK USER FOR NAME
     # name cannot be blank
     name = not_blank("Name:")
     print()
@@ -214,7 +214,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
         continue
 
 # ==================================================
-    # ask user for age
+    # ASK USER FOR AGE
     # make sure age is within range
     # determine ticket price according to age
     ticket_price = get_ticket_price()
@@ -227,7 +227,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     print()
 
 # ==================================================
-    # ask user if they want a snacks
+    # ASK USER FOR SNACKS + YES/NO
     check_snack = "invalid choice"
     while check_snack == "invalid choice":
         want_snack = input("Do you want Snacks?").lower()
@@ -258,6 +258,10 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
             '''
 
         print(snack_order)
+
+# ==================================================
+    # ASK FOR PAYMENT METHOD + SURCHARGE
+
 
 # ==================================================
 # DATAFRAME PRINTS HERE
