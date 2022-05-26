@@ -27,7 +27,7 @@ def string_check(choice, options):
 # main program goes here
 payment_method = [
     ["cash", "ca"],
-    ["card", "cr"]
+    ["credit", "cr"]
 ]
 
 name = ""
