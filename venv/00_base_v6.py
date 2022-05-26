@@ -255,18 +255,15 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     else:
         snack_order = []
 
-    print()
-    if len(snack_order) == 0:
-        print("Snacks Ordered: None")
+    for item in snack_order:
+        item.append(0)
 
-    else:
-        print("Snacks Ordered: ")
-
-        ''' for item in snack_order:
-            print(item)
-            '''
-
-        print(snack_order)
+    for item in snack_order:
+        if len(item) > 0:
+            to_find = (item[1])
+            amount = (item[0])
+            add_list = movie_data_dict[to_find]
+            add_list[-1] = amount
 
 # ==================================================
     # ASK FOR PAYMENT METHOD + SURCHARGE
