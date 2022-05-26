@@ -2,7 +2,7 @@ import pandas
 
 # initialise snack lists
 
-names = ["Short", "Long", "Sheet", "Stuffed", "Dumpling"]
+all_names = ["Short", "Long", "Sheet", "Stuffed", "Dumpling"]
 
 popcorn = []
 mms = []
@@ -12,7 +12,9 @@ water = []
 
 snack_lists = [popcorn, mms, pita_chips, orange_juice, water]
 
-snack_menu_dict = {
+# dataframe dictionary
+movie_data_dict = {
+    'Name': all_names,
     'Popcorn': popcorn,
     'M&Ms': mms,
     'Pita Chips': pita_chips,
@@ -20,6 +22,7 @@ snack_menu_dict = {
     'Water': water,
 }
 
+# test data
 test_data = [
     [[2, 'Popcorn'], [1, 'Pita Chips'], [1, 'Orange Juice']],
     [[]],
@@ -41,15 +44,19 @@ for client_order in test_data:
         if len(item) > 0:
             to_find = (item[1])
             amount = (item[0])
-            add_list = snack_menu_dict[to_find]
+            add_list = movie_data_dict[to_find]
             add_list[-1] = amount
 
 print()
+print("Names: ", all_names)
 print("Popcorn: ", snack_lists[0])
 print("M&Ms: ", snack_lists[1])
 print("Pita Chips: ", snack_lists[2])
 print("Orange Juice: ", snack_lists[3])
 print("Water: ", snack_lists[4])
 
+movie_frame = pandas.DataFrame(movie_data_dict)
+movie_frame = movie_frame.set_index('Name')
+print(movie_frame)
 
 
