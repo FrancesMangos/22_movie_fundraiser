@@ -188,6 +188,12 @@ snack_lists = [popcorn, mms, pita_chips, orange_juice, water]
 
 surcharge_mult_list = []
 
+summary_headings = ["Popcorn", "M&Ms", "Pita chips", "Orange Juice",
+                    "Water", "Snack Profit", "Ticket Profit", "Surcharge Profit",
+                    "Total Profit"]
+
+summary_data = []
+
 # movie data dictionary
 movie_data_dict = {
     'Name': all_names,
@@ -200,7 +206,6 @@ movie_data_dict = {
     'Surcharge_Multiplier': surcharge_mult_list
 }
 
-
 # snack price dictionary
 price_dict = {
     'Popcorn': 2.5,
@@ -208,6 +213,11 @@ price_dict = {
     'Pita Chips': 4.5,
     'Orange Juice': 3.25,
     'Water': 2,
+}
+
+summary_data_dict = {
+    'Item': summary_headings,
+    'Amount': summary_data
 }
 
 # ==================================================
@@ -333,6 +343,21 @@ movie_frame['Total'] = movie_frame['Sub Total'] + \
 movie_frame = movie_frame.rename(columns={'Orange Juice': 'OJ', 'Pita Chips': 'Chips',
                                           'Surcharge_Multiplier': "SM"})
 
+# calculate snack profit
+for item in snack_lists:
+    summary_data.append(sum(item))
+
+snack_total = movie_frame['Snacks'].sum()
+snack_profit = snack_total * 0.2
+summary_data.append(snack_profit)
+
+# calculate ticket profit
+ticket_profit = ticket_sales - (5 * ticket_count)
+summary_data.append(ticket_profit)
+
+total_profit = snack_profit + ticket_profit
+summ
+
 pandas.set_option('display.max_columns', None)
 
 pandas.set_option('precision', 2)
@@ -341,8 +366,7 @@ print(movie_frame)
 print()
 
 # ==================================================
-# POST MAIN PROGRAM GOES HERE
-ticket_profit = ticket_sales - (5 * ticket_count)
+# POST MAIN PROGRAM/PROFIT CALCULATOR/TICKET COUNT GOES HERE
 print("Ticket Profit: ${:.2f}".format(ticket_profit))
 
 if ticket_count == MAX_TICKETS:
