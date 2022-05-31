@@ -17,13 +17,13 @@ def not_blank(question):
             return response
         # prints error message if name is blank
         else:
-            print("Cannot be blank!")
+            print("Sorry - This cannot be blank!")
             print()
 
 
 def int_check(question):
 
-    error = "Please enter a whole number more than 0"
+    error = "Sorry - Please enter a whole number more than 0"
 
     valid = False
     while not valid:
@@ -113,14 +113,14 @@ def get_snack():
 
     valid_snacks = [
         ["popcorn", "p", "corn", "a"],
-        ["M&M's", "m&m's", "mms", "m", "b"],
+        ["M&Ms", "m&ms", "mms", "m", "b"],
         ["pita chips", "chips", "pc", "pita", "c"],
         ["orange juice", "orange j" "o juice", "oj", "d"],
         ["water", "w", "e"]
     ]
 
     # holds snack order for single user
-    order_of_snacks = []
+    snack_order = []
 
     desired_snack = ""
     while desired_snack != "xxx":
@@ -130,7 +130,7 @@ def get_snack():
         desired_snack = input("Snack: ").lower()
 
         if desired_snack == "xxx":
-            return order_of_snacks
+            return snack_order
 
         if re.match(number_regex, desired_snack):
             amount = int(desired_snack[0])
@@ -146,7 +146,6 @@ def get_snack():
 
         if amount >= 5:
             print("Sorry - Only 4 maximum of the same snack!")
-            print()
             snack_choice = "invalid choice"
             amount = ""
 
@@ -156,18 +155,16 @@ def get_snack():
         if snack_choice != "xxx" and snack_choice != "invalid choice":
 
             print("Snack Choice: {} {}".format(amount, snack_choice))
-            print()
-            order_of_snacks.append(snack_row)
+            snack_order.append(snack_row)
 
         else:
             print("Sorry - What you entered is invalid!")
-            print()
+
+        print()
 
 
 # ==================================================
 # VARIABLES GO HERE
-
-
 MAX_TICKETS = 5
 
 name = ""
@@ -187,13 +184,14 @@ pita_chips = []
 orange_juice = []
 water = []
 
-surcharge_mult_list = []
-
 snack_lists = [popcorn, mms, pita_chips, orange_juice, water]
+
+surcharge_mult_list = []
 
 # movie data dictionary
 movie_data_dict = {
     'Name': all_names,
+    'Ticket': all_tickets,
     'Popcorn': popcorn,
     'M&Ms': mms,
     'Pita Chips': pita_chips,
@@ -202,13 +200,14 @@ movie_data_dict = {
     'Surcharge_Multiplier': surcharge_mult_list
 }
 
+
 # snack price dictionary
 price_dict = {
     'Popcorn': 2.5,
-    'Water': 2,
-    'Pita Chips': 4.5,
     'M&Ms': 3,
+    'Pita Chips': 4.5,
     'Orange Juice': 3.25,
+    'Water': 2,
 }
 
 # ==================================================
@@ -257,13 +256,17 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 
     ticket_count += 1
     ticket_sales += ticket_price
-    print()
+
+    # puts details in the dataframe
+    name = name.title()
+    all_names.append(name)
+    all_tickets.append(ticket_price)
 
 # ==================================================
     # ASK USER FOR SNACKS + YES/NO
     check_snack = "invalid choice"
     while check_snack == "invalid choice":
-        want_snack = input("Do you want Snacks?").lower()
+        want_snack = input("Do you want Snacks?").lower().strip()
         check_snack = string_check(want_snack, yes_no)
 
     if check_snack == "Yes":
@@ -274,27 +277,31 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
         print("D. Orange Juice")
         print("E. Water")
         print()
+        print("- Max of 4 for each Snack!")
+        print()
         snack_order = get_snack()
 
     else:
         snack_order = []
 
-    for item in snack_order:
+    for item in snack_lists:
         item.append(0)
 
     for item in snack_order:
         if len(item) > 0:
             to_find = (item[1])
-            snack_amount = (item[0])
+            amount = (item[0])
             add_list = movie_data_dict[to_find]
-            add_list[-1] = snack_amount
+            add_list[-1] = amount
 
+    print()
 # ==================================================
     # ASK FOR PAYMENT METHOD + SURCHARGE
     how_pay = "invalid choice"
     while how_pay == "invalid choice":
-        how_pay = input("Please choose a payment method - cash/card")
+        how_pay = input("Please choose a payment method - cash/credit").strip().lower()
         how_pay = string_check(how_pay, payment_method)
+    print()
 
     if how_pay == "Credit":
         surcharge_multiplier = 0.05
@@ -305,9 +312,6 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 
 # ==================================================
 # DATAFRAME PRINTS HERE
-    name = name.title()
-    all_names.append(name)
-    all_tickets.append(ticket_price)
 
 movie_frame = pandas.DataFrame(movie_data_dict)
 movie_frame = movie_frame.set_index('Name')
@@ -320,13 +324,14 @@ movie_frame["Sub Total"] = \
     movie_frame['Orange Juice'] * price_dict['Orange Juice'] + \
     movie_frame['Water'] * price_dict['Water']
 
-movie_frame["Surcharge"] = \
-    movie_frame['Sub Total'] * movie_frame["Surcharge Multiplier"]
+movie_frame['Surcharge'] = \
+    movie_frame['Sub Total'] * movie_frame['Surcharge_Multiplier']
 
-movie_frame["Total"] = movie_frame["Sub Total"] + \
+movie_frame['Total'] = movie_frame['Sub Total'] + \
     movie_frame['Surcharge']
 
-movie_frame = movie_frame.rename(columns={'Orange Juice': 'OJ', 'Pita Chips': 'Chips'})
+movie_frame = movie_frame.rename(columns={'Orange Juice': 'OJ', 'Pita Chips': 'Chips',
+                                          'Surcharge_Multiplier': "SM"})
 
 pandas.set_option('display.max_columns', None)
 
