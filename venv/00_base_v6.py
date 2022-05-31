@@ -166,8 +166,6 @@ def get_snack():
 
 # ==================================================
 # VARIABLES GO HERE
-
-
 MAX_TICKETS = 5
 
 name = ""
