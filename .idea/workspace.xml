@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/00_base_v6.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/00_base_v6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/00_base_v7.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/00_base_v7.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/00_sandbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/00_sandbox.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +45,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.00_base_v6">
+  <component name="RunManager" selected="Python.00_base_v7">
     <configuration name="00_base_v6" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="22_movie_fundraiser" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -152,8 +153,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.00_base_v6" />
         <item itemvalue="Python.00_base_v7" />
+        <item itemvalue="Python.00_base_v6" />
         <item itemvalue="Python.08_snack_lists_v3" />
         <item itemvalue="Python.09_surcharge_v1" />
         <item itemvalue="Python.08_snack_lists_v2" />
@@ -175,7 +176,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="i wanna cry" />
     <MESSAGE value="i wanna cry but less" />
     <MESSAGE value="lets go" />
     <MESSAGE value="deleted" />
@@ -200,6 +200,7 @@
     <MESSAGE value="cry" />
     <MESSAGE value="what?" />
     <MESSAGE value="commit and push?" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit and push?" />
+    <MESSAGE value="it was snack lists and not snack order" />
+    <option name="LAST_COMMIT_MESSAGE" value="it was snack lists and not snack order" />
   </component>
 </project>
