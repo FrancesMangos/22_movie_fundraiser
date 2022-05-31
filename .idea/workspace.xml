@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="" />
+    <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/00_base_v6.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/00_base_v6.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -172,8 +175,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="i didnt even see this oml" />
-    <MESSAGE value="how did i miss this" />
     <MESSAGE value="i wanna cry" />
     <MESSAGE value="i wanna cry but less" />
     <MESSAGE value="lets go" />
@@ -197,6 +198,8 @@
     <MESSAGE value=":o" />
     <MESSAGE value="it doesnt wanna work" />
     <MESSAGE value="cry" />
-    <option name="LAST_COMMIT_MESSAGE" value="cry" />
+    <MESSAGE value="what?" />
+    <MESSAGE value="commit and push?" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit and push?" />
   </component>
 </project>
