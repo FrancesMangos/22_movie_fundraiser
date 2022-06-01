@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/venv/00_base_v8.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/00_base_v7.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/00_base_v7.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +43,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.00_base_v7">
+  <component name="RunManager" selected="Python.07_snack_analyser_v4">
     <configuration name="00_base_v6" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="22_movie_fundraiser" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -88,7 +86,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="08_snack_lists_v2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="00_base_v8" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="22_movie_fundraiser" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -100,7 +98,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/08_snack_lists_v2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/00_base_v8.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -109,7 +107,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="08_snack_lists_v3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="07_snack_analyser_v1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="22_movie_fundraiser" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -121,7 +119,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/08_snack_lists_v3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/07_snack_analyser_v1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -130,7 +128,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="09_surcharge_v1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="07_snack_analyser_v4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="22_movie_fundraiser" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -142,7 +140,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/09_surcharge_v1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/07_snack_analyser_v4.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.07_snack_analyser_v4" />
+        <item itemvalue="Python.07_snack_analyser_v1" />
+        <item itemvalue="Python.00_base_v8" />
         <item itemvalue="Python.00_base_v7" />
         <item itemvalue="Python.00_base_v6" />
-        <item itemvalue="Python.08_snack_lists_v3" />
-        <item itemvalue="Python.09_surcharge_v1" />
-        <item itemvalue="Python.08_snack_lists_v2" />
       </list>
     </recent_temporary>
   </component>
@@ -176,10 +174,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="deleted" />
-    <MESSAGE value="discontinued" />
-    <MESSAGE value="new base" />
-    <MESSAGE value="technically version two" />
     <MESSAGE value="yahoo" />
     <MESSAGE value="wooo" />
     <MESSAGE value="lETS GO" />
@@ -201,6 +195,10 @@
     <MESSAGE value="it was snack lists and not snack order" />
     <MESSAGE value="it has an underline :)" />
     <MESSAGE value="pain" />
-    <option name="LAST_COMMIT_MESSAGE" value="pain" />
+    <MESSAGE value="summary data start" />
+    <MESSAGE value="doesn't work but am keeping here" />
+    <MESSAGE value="still does not work" />
+    <MESSAGE value="added MMs to get_snack()" />
+    <option name="LAST_COMMIT_MESSAGE" value="added MMs to get_snack()" />
   </component>
 </project>
