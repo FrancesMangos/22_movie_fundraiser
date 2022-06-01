@@ -321,7 +321,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     surcharge_mult_list.append(surcharge_multiplier)
 
 # ==================================================
-# DATAFRAME PRINTS HERE
+# DATAFRAME PRINTS HERE - PART 1
 
 movie_frame = pandas.DataFrame(movie_data_dict)
 movie_frame = movie_frame.set_index('Name')
@@ -343,6 +343,8 @@ movie_frame['Total'] = movie_frame['Sub Total'] + \
 movie_frame = movie_frame.rename(columns={'Orange Juice': 'OJ', 'Pita Chips': 'Chips',
                                           'Surcharge_Multiplier': "SM"})
 
+# ==================================================
+# PROFIT CALCULATIONS HERE
 # calculate snack profit
 for item in snack_lists:
     summary_data.append(sum(item))
@@ -356,8 +358,10 @@ ticket_profit = ticket_sales - (5 * ticket_count)
 summary_data.append(ticket_profit)
 
 total_profit = snack_profit + ticket_profit
-summ
+summary_data.append(total_profit)
 
+# ==================================================
+# DATAFRAME PRINTS HERE - PART 2
 pandas.set_option('display.max_columns', None)
 
 pandas.set_option('precision', 2)
