@@ -199,7 +199,7 @@ snack_lists = [popcorn, mms, pita_chips, orange_juice, water]
 
 surcharge_mult_list = []
 
-summary_headings = ["Popcorn", "M&Ms", "Pita chips", "Orange Juice",
+summary_headings = ["Popcorn", "M&Ms", "Pita Chips", "Orange Juice",
                     "Water", "Snack Profit", "Ticket Profit", "Surcharge Profit",
                     "Total Profit"]
 

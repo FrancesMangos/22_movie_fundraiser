@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +41,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.07_snack_analyser_v4">
+  <component name="RunManager" selected="Python.00_base_v8">
     <configuration name="00_base_v6" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="22_movie_fundraiser" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -151,9 +149,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.00_base_v8" />
         <item itemvalue="Python.07_snack_analyser_v4" />
         <item itemvalue="Python.07_snack_analyser_v1" />
-        <item itemvalue="Python.00_base_v8" />
         <item itemvalue="Python.00_base_v7" />
         <item itemvalue="Python.00_base_v6" />
       </list>
@@ -174,7 +172,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="yahoo" />
     <MESSAGE value="wooo" />
     <MESSAGE value="lETS GO" />
     <MESSAGE value="back here again...woo" />
@@ -199,6 +196,7 @@
     <MESSAGE value="doesn't work but am keeping here" />
     <MESSAGE value="still does not work" />
     <MESSAGE value="added MMs to get_snack()" />
-    <option name="LAST_COMMIT_MESSAGE" value="added MMs to get_snack()" />
+    <MESSAGE value="final thing i guess" />
+    <option name="LAST_COMMIT_MESSAGE" value="final thing i guess" />
   </component>
 </project>
