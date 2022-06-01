@@ -113,7 +113,7 @@ def get_snack():
 
     valid_snacks = [
         ["popcorn", "p", "corn", "a"],
-        ["M&Ms", "m&ms", "mms", "m", "b"],
+        ["M&Ms", "MMs", "m&ms", "mms", "m", "b"],
         ["pita chips", "chips", "pc", "pita", "c"],
         ["orange juice", "orange j" "o juice", "oj", "d"],
         ["water", "w", "h20", "e"]

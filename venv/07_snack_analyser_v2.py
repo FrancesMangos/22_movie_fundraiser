@@ -76,7 +76,6 @@ if check_snack == "Yes":
 
         if snack_choice != "xxx" and snack_choice != "invalid choice":
             snack_order.append(amount_snack)
-
 print()
 if len(snack_order) == 0:
     print("Snacks Ordered: None")

@@ -31,7 +31,7 @@ def get_snack():
 
     valid_snacks = [
         ["popcorn", "p", "corn", "a"],
-        ["M&M's", "m&m's", "mms", "m", "b"],
+        ["M&Ms", "MMs", "m&ms", "mms", "m", "b"],
         ["pita chips", "chips", "pc", "pita", "c"],
         ["orange juice", "orange j" "o juice", "oj", "d"],
         ["water", "w", "e"]
@@ -80,7 +80,6 @@ def get_snack():
         else:
             print("Sorry - What you entered is invalid!")
             print()
-
 # valid options for yes/no questions
 yes_no = [
     ["yes", "y"],
@@ -119,5 +118,4 @@ else:
     ''' for item in snack_order:
         print(item)
         '''
-
     print(snack_order)
