@@ -372,7 +372,6 @@ print("*** Profit / Snack Summary ***")
 print()
 print(summary_frame)
 
-
 # ==================================================
 # POST MAIN PROGRAM/PROFIT CALCULATOR/TICKET COUNT GOES HERE
 print("Ticket Profit: ${:.2f}".format(ticket_profit))

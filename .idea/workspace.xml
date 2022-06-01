@@ -172,7 +172,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="wooo" />
     <MESSAGE value="lETS GO" />
     <MESSAGE value="back here again...woo" />
     <MESSAGE value="minor changes" />
@@ -197,6 +196,7 @@
     <MESSAGE value="still does not work" />
     <MESSAGE value="added MMs to get_snack()" />
     <MESSAGE value="final thing i guess" />
-    <option name="LAST_COMMIT_MESSAGE" value="final thing i guess" />
+    <MESSAGE value="why won't it woooooooooork" />
+    <option name="LAST_COMMIT_MESSAGE" value="why won't it woooooooooork" />
   </component>
 </project>
