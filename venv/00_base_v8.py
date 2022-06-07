@@ -41,6 +41,8 @@ def int_check(question):
         except ValueError:
             print(error)
 
+    print()
+
 
 def check_tickets(tickets_sold, ticket_limit):
     # tells user how seats are left
@@ -172,6 +174,7 @@ def get_snack():
             print("Sorry - What you entered is invalid!")
 
         print()
+    print()
 
 
 # ==================================================
@@ -320,12 +323,15 @@ movie_frame = pandas.DataFrame(movie_data_dict)
 movie_frame = movie_frame.set_index('Name')
 
 movie_frame["Sub Total"] = \
-    movie_frame['Ticket'] + \
     movie_frame['Popcorn'] * price_dict['Popcorn'] + \
     movie_frame['M&Ms'] * price_dict['M&Ms'] + \
     movie_frame['Pita Chips'] * price_dict['Pita Chips'] + \
     movie_frame['Orange Juice'] * price_dict['Orange Juice'] + \
     movie_frame['Water'] * price_dict['Water']
+
+movie_frame["Sub Total"] = \
+    movie_frame['Ticket'] + \
+    movie_frame['Snacks']
 
 movie_frame['Surcharge'] = \
     movie_frame['Sub Total'] * movie_frame['Surcharge_Multiplier']
