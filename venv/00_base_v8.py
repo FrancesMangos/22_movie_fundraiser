@@ -114,7 +114,7 @@ def get_snack():
     # and any possible abbreviations
 
     valid_snacks = [
-        ["popcorn", "p", "corn", "a"],
+        ["popcorn", "p", "pop", "corn", "a"],
         ["M&Ms", "MMs", "m&ms", "mms", "m", "b"],
         ["pita chips", "chips", "pc", "pita", "c"],
         ["orange juice", "orange j" "o juice", "oj", "d"],
@@ -128,7 +128,9 @@ def get_snack():
     print("D. Orange Juice")
     print("E. Water")
     print()
+    print("- Enter number then snack, ex: 3 chips")
     print("- Max of 4 for each Snack!")
+    print()
     print("- Type 'xxx' to exit")
     print()
 
@@ -287,7 +289,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     all_tickets.append(ticket_price)
 
 # ==================================================
-    # ASK USER FOR SNACKS + YES/NO
+    # ASK USER FOR SNACKS
     snack_order = get_snack()
 
     for item in snack_lists:
@@ -339,7 +341,8 @@ movie_frame['Surcharge'] = \
 movie_frame['Total'] = movie_frame['Sub Total'] + \
     movie_frame['Surcharge']
 
-movie_frame = movie_frame.rename(columns={'Orange Juice': 'OJ', 'Pita Chips': 'Chips',
+movie_frame = movie_frame.rename(columns={'Orange Juice': 'OJ',
+                                          'Pita Chips': 'Chips',
                                           'Surcharge_Multiplier': "SM"})
 
 # ==================================================
