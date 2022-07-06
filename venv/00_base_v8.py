@@ -324,7 +324,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 movie_frame = pandas.DataFrame(movie_data_dict)
 movie_frame = movie_frame.set_index('Name')
 
-movie_frame["Sub Total"] = \
+movie_frame["Snacks"] = \
     movie_frame['Popcorn'] * price_dict['Popcorn'] + \
     movie_frame['M&Ms'] * price_dict['M&Ms'] + \
     movie_frame['Pita Chips'] * price_dict['Pita Chips'] + \
@@ -343,7 +343,7 @@ movie_frame['Total'] = movie_frame['Sub Total'] + \
 
 movie_frame = movie_frame.rename(columns={'Orange Juice': 'OJ',
                                           'Pita Chips': 'Chips',
-                                          'Surcharge_Multiplier': "SM"})
+                                          'Surcharge_Multiplier': 'SM'})
 
 # ==================================================
 # PROFIT CALCULATIONS HERE
