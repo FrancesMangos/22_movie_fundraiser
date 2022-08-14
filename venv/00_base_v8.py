@@ -206,7 +206,7 @@ surcharge_mult_list = []
 
 summary_headings = ["Popcorn", "M&Ms", "Pita Chips", "Orange Juice",
                     "Water", "Snack Profit", "Ticket Profit", "Surcharge Profit",
-                    "Total Profit"]
+                     "Total Profit"]
 
 summary_data = []
 
@@ -250,7 +250,7 @@ snack_order = []
 # valid options for cash/card checker
 payment_method = [
     ["cash", "ca"],
-    ["credit", "cr"]
+    ["credit", "card", "cr"]
 ]
 
 # ==================================================
@@ -360,6 +360,14 @@ ticket_profit = ticket_sales - (5 * ticket_count)
 summary_data.append(ticket_profit)
 
 total_profit = snack_profit + ticket_profit
+
+if surcharge_multiplier == 0.05:
+    surcharge_profit = total_profit * 0.05
+else:
+    surcharge_profit = 0
+
+summary_data.append(surcharge_profit)
+
 summary_data.append(total_profit)
 
 # ==================================================
@@ -374,17 +382,15 @@ pandas.set_option('precision', 2)
 print()
 print("*** Ticket / Snack Information ***")
 print("Note: for full details please visit excel file called Movie Fundraiser")
-print()
 print(movie_frame[['Ticket', 'Snacks', 'Sub Total', 'Surcharge', 'Total']])
 
-print("*** Profit / Snack Summary ***")
 print()
+print("*** Profit / Snack Summary ***")
 print(summary_frame)
 
 # ==================================================
 # POST MAIN PROGRAM/PROFIT CALCULATOR/TICKET COUNT GOES HERE
-print("Ticket Profit: ${:.2f}".format(ticket_profit))
-
+print()
 if ticket_count == MAX_TICKETS:
     print("You have sold all the available tickets!")
 else:
