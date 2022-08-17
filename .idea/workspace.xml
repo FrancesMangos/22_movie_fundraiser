@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/venv/00_base_v9.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/00_base_v9.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/00_base_v9.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +175,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="i have brain" />
     <MESSAGE value="tweaked string checker cuz she did" />
     <MESSAGE value="surcharge doesnt work smh" />
     <MESSAGE value="surcharge in base component?" />
@@ -200,7 +199,8 @@
     <MESSAGE value="waiting" />
     <MESSAGE value="snacks" />
     <MESSAGE value="thanks jordan" />
-    <option name="LAST_COMMIT_MESSAGE" value="thanks jordan" />
+    <MESSAGE value="surchage profit being dumb" />
+    <option name="LAST_COMMIT_MESSAGE" value="surchage profit being dumb" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

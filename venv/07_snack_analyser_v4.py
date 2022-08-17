@@ -42,6 +42,7 @@ def get_snack():
 
     desired_snack = ""
     while desired_snack != "xxx":
+        total_amount = 0
 
         snack_row = []
 
@@ -53,26 +54,35 @@ def get_snack():
         if re.match(number_regex, desired_snack):
             amount = int(desired_snack[0])
             desired_snack = desired_snack[1:]
+            total_amount = total_amount + amount
 
         else:
             amount = 1
             desired_snack = desired_snack
+            total_amount = total_amount + amount
 
         desired_snack = desired_snack.strip()
 
         snack_choice = string_check(desired_snack, valid_snacks)
 
-        if amount >= 5:
+        if amount >= 5 or total_amount >= 5:
             print("Sorry - Only 4 maximum of the same snack!")
-            print()
-            snack_choice = "invalid choice"
-            amount = ""
+
+            if total_amount >= 5:
+                print("We will just take the most recent number quantity, that is valid, that was asked for that snack.")
+                print()
+                snack_choice = "invalid choice"
+                total_amount = amount
+
+            if amount >= 5:
+                print()
+                snack_choice = "invalid choice"
+                amount = ""
 
         snack_row.append(amount)
         snack_row.append(snack_choice)
 
         if snack_choice != "xxx" and snack_choice != "invalid choice":
-
             print("Snack Choice: {} {}".format(amount, snack_choice))
             print()
             snack_order.append(snack_row)

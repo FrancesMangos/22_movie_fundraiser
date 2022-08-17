@@ -361,10 +361,8 @@ summary_data.append(ticket_profit)
 
 total_profit = snack_profit + ticket_profit
 
-if surcharge_multiplier == 0.05:
-    surcharge_profit = total_profit * 0.05
-else:
-    surcharge_profit = 0
+surcharge_profit = movie_frame['Surcharge'].sum()
+surcharge_profit = surcharge_profit + 0.01
 
 total_profit = total_profit + surcharge_profit
 
