@@ -82,6 +82,7 @@ def get_snack():
         snack_row.append(amount)
         snack_row.append(snack_choice)
 
+        # create a sum of the amount for each choice
         if snack_choice != "xxx" and snack_choice != "invalid choice":
             print("Snack Choice: {} {}".format(amount, snack_choice))
             print()
