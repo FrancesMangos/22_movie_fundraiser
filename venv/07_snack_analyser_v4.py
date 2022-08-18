@@ -65,20 +65,6 @@ def get_snack():
 
         snack_choice = string_check(desired_snack, valid_snacks)
 
-        if amount >= 5 or total_amount >= 5:
-            print("Sorry - Only 4 maximum of the same snack!")
-
-            if total_amount >= 5:
-                print("We will just take the most recent number quantity, that is valid, that was asked for that snack.")
-                print()
-                snack_choice = "invalid choice"
-                total_amount = amount
-
-            if amount >= 5:
-                print()
-                snack_choice = "invalid choice"
-                amount = ""
-
         snack_row.append(amount)
         snack_row.append(snack_choice)
 
