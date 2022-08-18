@@ -128,8 +128,9 @@ def get_snack():
     print("D. Orange Juice")
     print("E. Water")
     print()
-    print("- Enter number then snack, ex: 3 chips")
+    print("- Enter number then snack, ex: 3 chips or 3pc.")
     print("- Max of 4 for each Snack!")
+    print("- We will use the amount of the last time you requested a snack, \n for example: if you said 4 water, then later 3 water, you will get 3 water.")
     print()
     print("- Type 'xxx' to exit")
     print()
@@ -362,7 +363,7 @@ summary_data.append(ticket_profit)
 total_profit = snack_profit + ticket_profit
 
 surcharge_profit = movie_frame['Surcharge'].sum()
-surcharge_profit = surcharge_profit + 0.01
+surcharge_profit = surcharge_profit
 
 total_profit = total_profit + surcharge_profit
 
