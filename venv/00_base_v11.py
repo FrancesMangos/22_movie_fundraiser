@@ -120,18 +120,19 @@ def get_snack():
         ["orange juice", "orange j" "o juice", "oj", "d"],
         ["water", "w", "h20", "e"]
     ]
-
-    print("Snack Options:")
+    # instructions
+    print("----- Snack Options -----")
     print("A. Popcorn")
     print("B. M&Ms")
     print("C. Pita Chips")
     print("D. Orange Juice")
     print("E. Water")
     print()
-    print("- Enter number then the snack, ex: 3chips or 3pc.")
+    print("- Enter number then the snack, ex: 3popcorn or 3pop.")
     print("- Maximum of Four for a Snack!")
     print("- Slight variations for a snack name will be accepted")
     print("- We will use the amount of the last time you requested a snack, \n for example: if you said 4 water, then later 3 water, you will get 3 water.")
+    print("- To request for none of a snack after you said you wanted it, simply type '0' then the snack, \n for example: 0popcorn or 0pop")
     print()
     print("To exit, simply type 'xxx' when it asks for a snack")
     print()
@@ -228,7 +229,7 @@ summary_headings = ["Popcorn", "M&Ms", "Pita Chips", "Orange Juice",
 
 summary_data = []
 
-# movie data dictionary
+# stores details and snack amounts for each user
 movie_data_dict = {
     'Name': all_names,
     'Ticket': all_tickets,
@@ -240,7 +241,7 @@ movie_data_dict = {
     'Surcharge_Multiplier': surcharge_mult_list
 }
 
-# snack price dictionary
+# stores price for each snack
 price_dict = {
     'Popcorn': 2.5,
     'M&Ms': 3,
@@ -249,6 +250,7 @@ price_dict = {
     'Water': 2,
 }
 
+# stores how much profit you gain per item - ticket, snacks
 summary_data_dict = {
     'Item': summary_headings,
     'Amount': summary_data
@@ -289,6 +291,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     name = not_blank("Name:")
     print()
 
+    # if the user types the exit code the program stops
     if name == "xxx":
         continue
 
