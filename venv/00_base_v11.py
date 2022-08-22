@@ -128,11 +128,12 @@ def get_snack():
     print("D. Orange Juice")
     print("E. Water")
     print()
-    print("- Enter number then snack, ex: 3 chips or 3pc.")
-    print("- Max of 4 for each Snack!")
+    print("- Enter number then the snack, ex: 3chips or 3pc.")
+    print("- Maximum of Four for a Snack!")
+    print("- Slight variations for a snack name will be accepted")
     print("- We will use the amount of the last time you requested a snack, \n for example: if you said 4 water, then later 3 water, you will get 3 water.")
     print()
-    print("- Type 'xxx' to exit")
+    print("To exit, simply type 'xxx' when it asks for a snack")
     print()
 
     # holds snack order for single user
@@ -173,9 +174,6 @@ def get_snack():
             print("Snack Choice: {} {}".format(amount, snack_choice))
             snack_order.append(snack_row)
 
-        else:
-            print("Sorry - What you entered is invalid!")
-
         print()
     print()
 
@@ -185,22 +183,23 @@ def currency(x):
 
 
 def instructions(options):
-    show_help = "invalid choice"
-    while show_help == "invalid choice":
-        show_help = input("Would you like to read the instructions?")
-        show_help = string_check((show_help, options))
-
-    if show_help == "yes":
-        print()
-        print("**** MEGA MOVIE FUNDRAISER INSTRUCTIONS ****")
-        print()
-        print("Instructions go here. They are brief but helpful :]")
-
-    return ""
+    show_instructions = False
+    while not show_instructions:
+        show_help = input("Would you like to see the instructions?").lower()
+        if show_help == "yes" or show_help == "y":
+            print("The program will ask you for your:")
+            print("Age, Any Snacks you would like to purchase, and your preferred Payment Method")
+            print("---")
+            print("You must enter a valid option or response for each question")
+            print("To exit, simply type 'xxx' once the program asks for a name.")
+            return show_help
+        else:
+            print("You did not want to see the instructions")
+            return show_help
 
 # ==================================================
 # VARIABLES GO HERE
-MAX_TICKETS = 5
+MAX_TICKETS = 100
 
 name = ""
 
@@ -281,9 +280,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 
     # check that number of tickets has not been exceeded
     check_tickets(ticket_count, MAX_TICKETS)
-# ==================================================
-    # ASK USER IF THEY WANT INSTRUCTIONS
-    instructions(yes_no)
+    print()
 
 # ==================================================
     # GET DETAILS
@@ -294,6 +291,11 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 
     if name == "xxx":
         continue
+
+# ==================================================
+    # ASK USER IF THEY WANT INSTRUCTIONS
+    instructions(yes_no)
+    print()
 
 # ==================================================
     # ASK USER FOR AGE
@@ -410,13 +412,13 @@ movie_frame.to_csv('ticket_details.csv')
 summary_frame.to_csv('snack_summary.csv')
 
 print()
-print("*** Ticket / Snack Information ***")
+print("----- Ticket / Snack Information -----")
 print("Note: for full details please visit excel file called Movie Fundraiser")
-print(movie_frame[['Ticket', 'Snacks', 'Sub Total', 'Surcharge', 'Total']])
 print()
+print(movie_frame[['Ticket', 'Snacks', 'Sub Total', 'Surcharge', 'Total']])
 
 print()
-print("*** Profit / Snack Summary ***")
+print("----- Profit / Snack Summary -----")
 print()
 print(summary_frame)
 

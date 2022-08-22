@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/venv/00_base_v11.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/snack_summary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/venv/snack_summary.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/ticket_details.csv" beforeDir="false" afterPath="$PROJECT_DIR$/venv/ticket_details.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/00_base_v11.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/00_base_v11.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +175,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="i dont even know anymore" />
     <MESSAGE value=":o" />
     <MESSAGE value="it doesnt wanna work" />
     <MESSAGE value="cry" />
@@ -202,7 +199,8 @@
     <MESSAGE value="i broke this, whoops" />
     <MESSAGE value="fixed something" />
     <MESSAGE value="finished :D" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished :D" />
+    <MESSAGE value="never mind i lied, fix instructions bcuz dumb" />
+    <option name="LAST_COMMIT_MESSAGE" value="never mind i lied, fix instructions bcuz dumb" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
