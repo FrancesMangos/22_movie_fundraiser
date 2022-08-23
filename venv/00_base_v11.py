@@ -131,8 +131,6 @@ def get_snack():
     print("- Enter number then the snack, ex: 3popcorn or 3pop.")
     print("- Maximum of Four for a Snack!")
     print("- Slight variations for a snack name will be accepted")
-    print("- We will use the amount of the last time you requested a snack, \n for example: if you said 4 water, then later 3 water, you will get 3 water.")
-    print("- To request for none of a snack after you said you wanted it, simply type '0' then the snack, \n for example: 0popcorn or 0pop")
     print()
     print("To exit, simply type 'xxx' when it asks for a snack")
     print()
