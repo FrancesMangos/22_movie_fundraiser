@@ -1,3 +1,8 @@
+# This program is called: Movie Fundraiser.
+# My name is: France Magno.
+# I started this project on: 21st of March 2022.
+
+# ==================================================
 # IMPORTS GO HERE
 import re
 import pandas
