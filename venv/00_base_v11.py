@@ -1,6 +1,8 @@
 # This program is called: Movie Fundraiser.
 # My name is: France Magno.
 # I started this project on: 21st of March 2022.
+# This program asks for, and stores, the names, food and drink preferences, -
+# - payment options, and total cost of orders for people who are buying tickets to the movie.
 
 # ==================================================
 # IMPORTS GO HERE
@@ -11,21 +13,25 @@ import pandas
 # FUNCTIONS GO HERE
 
 
+# This function makes sure that inputs that go through questions, that requires an input to not be blank, to force -
+# - users who do enter a blank input to answer the question again until they answer with a not blank input.
 def not_blank(question):
     valid = False
 
     while not valid:
         response = input(question)
 
-        # checks if name is blank
+        # This checks if name is blank. If it is blank it will print an error message, and will keep -
+        # - asking the question until they enter an input that is not blank. If it is not blank, it will continue.
         if response != "":
             return response
-        # prints error message if name is blank
         else:
             print("Sorry - This cannot be blank!")
             print()
 
 
+# This function makes sure that inputs that go through questions, that requires -
+# - an input to be an integer, to keep answering the question until they answer with a valid integer.
 def int_check(question):
 
     error = "Sorry - Please enter a whole number more than 0"
@@ -33,24 +39,28 @@ def int_check(question):
     valid = False
     while not valid:
 
-        # ask user for age and check if is valid
+        # This asks the user for their age. If the user's age is not an integer, it will print an error message and -
+        #  - the program will keep asking the question until the user enters a valid integer.
         try:
             response = int(input(question))
 
+            # This checks that the user's age is not a negative number
             if response <= 0:
                 print(error)
             else:
                 return response
 
-        # if an integer is not entered, display an error message
         except ValueError:
             print(error)
 
     print()
 
 
+# This function keeps track of how many tickets are sold, and if they ever exceed the amount of tickets that are -
+# - actually available, after which they will alert the user how many tickets have been sold and how many seats are left.
 def check_tickets(tickets_sold, ticket_limit):
-    # tells user how seats are left
+    # This checks if the amount of tickets sold is less that the amount of tickets available. If the -
+    # - latter is more than the former, the program will print a message displaying how many seats are left.
     if tickets_sold < ticket_limit - 1:
         print("You have {} seats "
               "left".format(ticket_limit - tickets_sold))
@@ -61,20 +71,26 @@ def check_tickets(tickets_sold, ticket_limit):
     return ""
 
 
+# This function determines the ticket price for the user depending on their age.
 def get_ticket_price():
     age = int_check("Age:")
     print()
 
+    # This checks if the user is old enough for the movie. If they are too -
+    # - young the program will tell them that they are too young, and restarts the program.
     if age < 12:
         print("Sorry - You are too young for this movie.")
         print()
         return "invalid ticket price"
 
+    # This checks if the user's input is realistic. If the user's age exceeds the most realistic oldest age for a -
+    # - person, the program will tell them they must have entered their age wrong, and restarts the program.
     if age > 130:
         print("Sorry - Your input is too big, it looks like a mistake")
         print()
         return "invalid ticket price"
 
+    # The next following lines of code determines the price of the user's ticket depending on their age.
     if age < 16:
         price_of_ticket = 7.5
 
@@ -87,6 +103,8 @@ def get_ticket_price():
     return price_of_ticket
 
 
+# This function makes sure that inputs for a question, that has a set amount of valid inputs that go through it, is -
+# - one of the valid inputs. The program will keep asking the user the question until their enter one of the valid inputs.
 def string_check(choice, options):
 
     is_valid = ""
@@ -94,6 +112,7 @@ def string_check(choice, options):
 
     for var_list in options:
 
+        # This checks if the user's input is one of the available inputs.
         if choice in var_list:
 
             chosen = var_list[0].title()
@@ -109,15 +128,15 @@ def string_check(choice, options):
         return "invalid choice"
 
 
+# This function asks the user for their desired snack and drink preferences. The program -
+# - lets users buy more than one of the same snack or drink, but never more than a certain amount. The program also -
+# - allows users to buy multiple varieties of snacks and drinks.
 def get_snack():
 
     number_regex = "^[1-9]"
 
-    # valid snacks holds list of all snacks
-    # each item in valid snacks is a list with,
-    # valid options for each snack - full name, letter code,
-    # and any possible abbreviations
-
+    # This list holds the list of available snacks. It holds the full name, -
+    # - shortenings and any other possible abbreviations for that snack
     valid_snacks = [
         ["popcorn", "p", "pop", "corn", "a"],
         ["M&Ms", "MMs", "m&ms", "mms", "m", "b"],
@@ -125,7 +144,8 @@ def get_snack():
         ["orange juice", "orange j" "o juice", "oj", "d"],
         ["water", "w", "h20", "e"]
     ]
-    # instructions
+    # This prints out the instructions. It tells the user how to order, and -
+    # - the limitations with their order. This also tells the user how to finish with their order.
     print("----- Snack Options -----")
     print("A. Popcorn")
     print("B. M&Ms")
@@ -140,12 +160,15 @@ def get_snack():
     print("To exit, simply type 'xxx' when it asks for a snack")
     print()
 
-    # holds snack order for single user
+    # This holds the snacks and drinks a single user orders.
     snack_order = []
 
     desired_snack = ""
+    # This checks if the user has finished their order, initiated by entering the exit code.
     while desired_snack != "xxx" or desired_snack != "n":
 
+        # This temporarily holds the snacks and drinks of a single user's order. This is because we can take -
+        # - or add things to this temporary list before permanently adding it to the first list.
         snack_row = []
 
         desired_snack = input("Snack: ").lower()
@@ -153,6 +176,7 @@ def get_snack():
         if desired_snack == "xxx":
             return snack_order
 
+        # This checks if the user's input has a number before the snack choice, indicating that they want more than one.
         if re.match(number_regex, desired_snack):
             amount = int(desired_snack[0])
             desired_snack = desired_snack[1:]
@@ -165,6 +189,8 @@ def get_snack():
 
         snack_choice = string_check(desired_snack, valid_snacks)
 
+        # This checks if the user has ordered less that the limited amount of one snack or drink -
+        # - they can order. If the user does exceed this number the input they provided is cancel.
         if amount >= 5:
             print("Sorry - Only 4 maximum of the same snack!")
             snack_choice = "invalid choice"
@@ -182,10 +208,12 @@ def get_snack():
     print()
 
 
+# This function formats the currency entered into the question to replicate how money would be shown in real life.
 def currency(x):
     return "${:.2f}".format(x)
 
 
+# This functions shows the user the instructions on how to use this program.
 def instructions(options):
     show_instructions = False
     while not show_instructions:
