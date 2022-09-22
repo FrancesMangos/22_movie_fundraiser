@@ -4,6 +4,8 @@
     <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/00_base_v11.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/00_base_v11.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/snack_summary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/venv/snack_summary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/ticket_details.csv" beforeDir="false" afterPath="$PROJECT_DIR$/venv/ticket_details.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +177,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="commit and push?" />
     <MESSAGE value="it was snack lists and not snack order" />
     <MESSAGE value="it has an underline :)" />
     <MESSAGE value="pain" />
@@ -200,7 +201,8 @@
     <MESSAGE value="&#10;yahoo" />
     <MESSAGE value="ithinkthisisdonenow@ymail.com" />
     <MESSAGE value="added a header" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a header" />
+    <MESSAGE value="WORDS" />
+    <option name="LAST_COMMIT_MESSAGE" value="WORDS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

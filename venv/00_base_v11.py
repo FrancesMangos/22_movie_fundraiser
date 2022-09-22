@@ -231,19 +231,25 @@ def instructions(options):
 
 # ==================================================
 # VARIABLES GO HERE
+# This variable monitors how many tickets can be sold.
 MAX_TICKETS = 100
 
+# This variable holds the user's name during their session.
 name = ""
 
+# These variables monitor the amount of tickets sold.
 ticket_count = 0
 ticket_sales = 0
 
 # ==================================================
 # DATAFRAME STUFF GOES HERE
-# details
+# This variable holds the list to every name that has been passed through the program.
 all_names = []
+# This variable holds the list to the ticket price associated with each user that has used the program.
 all_tickets = []
 
+# These variables hold lists to the amount of a particular -
+# - snack or drink each user has or has not ordered during their session.
 popcorn = []
 mms = []
 pita_chips = []
@@ -254,13 +260,16 @@ snack_lists = [popcorn, mms, pita_chips, orange_juice, water]
 
 surcharge_mult_list = []
 
+# This variable holds the list to the headings used in the -
+# - summary later in the program that prints out all user details.
 summary_headings = ["Popcorn", "M&Ms", "Pita Chips", "Orange Juice",
                     "Water", "Snack Profit", "Ticket Profit", "Surcharge Profit",
                      "Total Profit"]
 
 summary_data = []
 
-# stores details and snack amounts for each user
+# This variable holds the dictionary to the details of users who use the program. This consists of the user's -
+# -  name, ticket price, snack and drink preferences, and the surcharge multiplier if a user has paid with a card.
 movie_data_dict = {
     'Name': all_names,
     'Ticket': all_tickets,
@@ -272,7 +281,7 @@ movie_data_dict = {
     'Surcharge_Multiplier': surcharge_mult_list
 }
 
-# stores price for each snack
+# This variable holds the dictionary to each snack and drink, and the corresponding price to each one.
 price_dict = {
     'Popcorn': 2.5,
     'M&Ms': 3,
@@ -281,7 +290,7 @@ price_dict = {
     'Water': 2,
 }
 
-# stores how much profit you gain per item - ticket, snacks
+# This variable stores the profit from each profitable variable, such as the ticket price, and snack and drink prices.
 summary_data_dict = {
     'Item': summary_headings,
     'Amount': summary_data
@@ -289,16 +298,16 @@ summary_data_dict = {
 
 # ==================================================
 # LISTS GO HERE
-# valid options for yes/no questions
+# This variable holds the valid options for yes/no questions.
 yes_no = [
     ["yes", "y"],
     ["no", "n"]
 ]
 
-# holds snack order for a single user
+# This variable holds the order of a user's preferred snacks and drinks.
 snack_order = []
 
-# valid options for cash/card checker
+# This variable holds the valid options for the card/cash checker.
 payment_method = [
     ["cash", "ca"],
     ["credit", "card", "cr"]
@@ -306,23 +315,24 @@ payment_method = [
 
 # ==================================================
 # MAIN PROGRAM STARTS HERE
-# execute program if exit code has not been received and there are tickets left
 print("Program Launches...")
 print()
+
+# This checks if the user has not yet inputted the exit code, nor has exceeded the amount of tickets available to be sold.
 while name != "xxx" and ticket_count < MAX_TICKETS:
 
-    # check that number of tickets has not been exceeded
     check_tickets(ticket_count, MAX_TICKETS)
     print()
 
 # ==================================================
     # GET DETAILS
     # ASK USER FOR NAME
-    # name cannot be blank
+    # This calls the not_blank function to ensure that the user's input cannot be blank.
     name = not_blank("Name:")
     print()
 
-    # if the user types the exit code the program stops
+    # This checks if the user has inputted the exit code. If they -
+    # -  have they bypass all the questions, and are brought to the end of the program.
     if name == "xxx":
         continue
 
@@ -333,17 +343,18 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 
 # ==================================================
     # ASK USER FOR AGE
-    # make sure age is within range
-    # determine ticket price according to age
+    # This calls the get_ticket_price function which asks the user -
+    # - or their age, then determines the price of the user depending on their age.
     ticket_price = get_ticket_price()
 
+    # This checks if the user's input is invalid. If it is the user is brought back to the beginning of the program.
     if ticket_price == "invalid ticket price":
         continue
 
     ticket_count += 1
     ticket_sales += ticket_price
 
-    # puts details in the dataframe
+    # This puts both the name, and ticket price of the user into their corresponding lists.
     name = name.title()
     all_names.append(name)
     all_tickets.append(ticket_price)
@@ -355,6 +366,8 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     for item in snack_lists:
         item.append(0)
 
+    # This checks if the user wants more than one of a particular -
+    # - snack or drink. If they do, the program adds as much of the snack or drink as requested as the user.
     for item in snack_order:
         if len(item) > 0:
             to_find = (item[1])
@@ -366,16 +379,20 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 # ==================================================
     # ASK FOR PAYMENT METHOD + SURCHARGE
     how_pay = "invalid choice"
+
     while how_pay == "invalid choice":
         how_pay = input("Please choose a payment method - cash/credit").strip().lower()
         how_pay = string_check(how_pay, payment_method)
+
     print()
 
+    # This determines if the user will be charged extra if they use a card to pay.
     if how_pay == "Credit":
         surcharge_multiplier = 0.05
     else:
         surcharge_multiplier = 0
 
+    # This puts the surcharge multiplier (which can be 0) in its corresponding list.
     surcharge_mult_list.append(surcharge_multiplier)
 
 # ==================================================
@@ -401,31 +418,32 @@ movie_frame['Surcharge'] = \
 movie_frame['Total'] = movie_frame['Sub Total'] + \
     movie_frame['Surcharge']
 
+# This renames the longer headings in the dataframe to shorter abbreviations.
 movie_frame = movie_frame.rename(columns={'Orange Juice': 'OJ',
                                           'Pita Chips': 'Chips',
                                           'Surcharge_Multiplier': 'SM'})
 
 # ==================================================
 # PROFIT CALCULATIONS HERE
-# calculate snack profit
+# This calculates the profit from snacks and drinks.
 for item in snack_lists:
     summary_data.append(sum(item))
 
 snack_total = movie_frame['Snacks'].sum()
 snack_profit = snack_total * 0.2
 
-# calculate ticket profit
+# This calculates the profit from tickets.
 ticket_profit = ticket_sales - (5 * ticket_count)
 total_profit = snack_profit + ticket_profit
 
-# calculate surcharge profit
+# This calculates the profit from surcharge.
 surcharge_profit = movie_frame['Surcharge'].sum()
 surcharge_profit = surcharge_profit
 
-# calculate total profit
+# This adds all the profit from the other profitable variables into the total profit.
 total_profit = total_profit + surcharge_profit
 
-# put all profit into summary data
+# This puts all the profit variables in the dictionary.
 dollar_amounts = [snack_profit, ticket_profit, surcharge_profit, total_profit]
 for item in dollar_amounts:
     item = "${:.2f}".format(item)
@@ -436,8 +454,10 @@ for item in dollar_amounts:
 summary_frame = pandas.DataFrame(summary_data_dict)
 summary_frame = summary_frame.set_index('Item')
 
+# This ensures that there is no limit to the amount of columns that can be printed.
 pandas.set_option('display.max_columns', None)
 
+# This calls the currency function that makes all the profit variables are formatted in a way that mimics real life.
 add_dollars = ['Ticket', 'Snacks', 'Surcharge', 'Total', 'Sub Total']
 for item in add_dollars:
     movie_frame[item] = movie_frame[item].apply(currency)
@@ -445,19 +465,21 @@ for item in add_dollars:
 movie_frame.to_csv('ticket_details.csv')
 summary_frame.to_csv('snack_summary.csv')
 
+# This prints the summary of details, snacks and drinks.
 print()
 print("----- Ticket / Snack Information -----")
 print("Note: for full details please visit excel file called Movie Fundraiser")
 print()
 print(movie_frame[['Ticket', 'Snacks', 'Sub Total', 'Surcharge', 'Total']])
 
+# This prints the summary of profits.
 print()
 print("----- Profit / Snack Summary -----")
 print()
 print(summary_frame)
 
 # ==================================================
-# POST MAIN PROGRAM/PROFIT CALCULATOR/TICKET COUNT GOES HERE
+# POST MAIN PROGRAM/TICKET COUNT GOES HERE
 print()
 if ticket_count == MAX_TICKETS:
     print("You have sold all the available tickets!")
