@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d2d726e7-b15c-4ce8-8541-073b672c2e06" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/00_base_v11.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/00_base_v11.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/snack_summary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/venv/snack_summary.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/ticket_details.csv" beforeDir="false" afterPath="$PROJECT_DIR$/venv/ticket_details.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +43,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../11DIGITAL - Ms McLaren/Python/03_quiz_assessment" />
     <property name="settings.editor.selected.configurable" value="RainbowCSV.Settings" />
   </component>
-  <component name="RunManager" selected="Python.00_base_v11">
+  <component name="RunManager" selected="Python.03_number_checker_v2">
     <configuration name="00_base_v10" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="22_movie_fundraiser" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -89,27 +86,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="00_base_v8" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="22_movie_fundraiser" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/00_base_v8.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="00_base_v9" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="22_movie_fundraiser" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -131,7 +107,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="07_snack_analyser_v4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="01_not_blank_v2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="22_movie_fundraiser" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -143,7 +119,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/07_snack_analyser_v4.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/01_not_blank_v2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="03_number_checker_v2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="22_movie_fundraiser" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/03_number_checker_v2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -154,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.03_number_checker_v2" />
+        <item itemvalue="Python.01_not_blank_v2" />
         <item itemvalue="Python.00_base_v11" />
         <item itemvalue="Python.00_base_v10" />
         <item itemvalue="Python.00_base_v9" />
-        <item itemvalue="Python.07_snack_analyser_v4" />
-        <item itemvalue="Python.00_base_v8" />
       </list>
     </recent_temporary>
   </component>
@@ -177,7 +174,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="it was snack lists and not snack order" />
     <MESSAGE value="it has an underline :)" />
     <MESSAGE value="pain" />
     <MESSAGE value="summary data start" />
@@ -202,7 +198,8 @@
     <MESSAGE value="ithinkthisisdonenow@ymail.com" />
     <MESSAGE value="added a header" />
     <MESSAGE value="WORDS" />
-    <option name="LAST_COMMIT_MESSAGE" value="WORDS" />
+    <MESSAGE value="done :]" />
+    <option name="LAST_COMMIT_MESSAGE" value="done :]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
